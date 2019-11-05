@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buttons
+title: Logistic Regression
 parent: Machine Learning
 nav_order: 1
 ---

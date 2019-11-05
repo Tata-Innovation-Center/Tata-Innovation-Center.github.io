@@ -50,7 +50,7 @@ Here is a very detailed example: [LINK](https://blog.csdn.net/guyuealian/article
 
 In next section, the theorem shows that the training error of the output hypothesis decreases exponentially fast with the number of boosting rounds.
 
-## upper bound of adaboost error
+## Upper bound of adaboost error
 
 Theorem: Let $$S$$ be a training set and assume that at each iteration of AdaBoost, the weak learner returns a hypothesis for which $$\epsilon_{t} \leq 1 / 2-\gamma$$. Then, the training error of the output hypothesis of AdaBoost is at most
 

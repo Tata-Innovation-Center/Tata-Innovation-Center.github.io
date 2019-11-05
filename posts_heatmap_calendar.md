@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Posts Heatmap Calendar
+nav_exclude: true
 permalink: /posts-cal/
 ---
 

@@ -2,6 +2,7 @@
 layout: default
 title: Algorithm and data structure
 nav_order: 3
+mathjax: true
 has_children: true
 permalink: /docs/algorithm-and-data-structure
 ---

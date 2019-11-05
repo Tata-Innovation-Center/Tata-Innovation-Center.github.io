@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Adaboost
+mathjax: true
 parent: Machine Learning
 nav_order: 4
 ---

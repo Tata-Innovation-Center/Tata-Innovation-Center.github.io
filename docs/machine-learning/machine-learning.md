@@ -3,6 +3,7 @@ layout: default
 title: Machine Learning
 nav_order: 3
 has_children: true
+mathjax: true
 permalink: /docs/machine-learning
 ---
 

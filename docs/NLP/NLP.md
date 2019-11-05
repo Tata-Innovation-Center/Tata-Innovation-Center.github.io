@@ -3,7 +3,7 @@ layout: default
 title: NLP
 nav_order: 3
 has_children: true
-permalink: /docs/NLP
+permalink: docs/NLP
 ---
 
 # NLP

@@ -10,7 +10,6 @@ permalink: /
 
 ---
 
-test
 
 #### Tata Innovation Center Gang
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Lee Sin
-parent: League of Legends
+title: SIFT
+parent: Computer Vision
 nav_order: 2
 ---
 

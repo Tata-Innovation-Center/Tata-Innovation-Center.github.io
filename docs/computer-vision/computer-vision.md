@@ -1,12 +1,12 @@
 ---
 layout: default
-title: League of Legends
+title: Computer Vision
 nav_order: 3
 has_children: true
-permalink: /docs/league-of-legends
+permalink: /docs/computer-vision
 ---
 
-# League of Legends
+# Computer Vision
 
 In Writing
 {: .fs-6 .fw-300 }

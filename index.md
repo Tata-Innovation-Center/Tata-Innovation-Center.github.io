@@ -2,11 +2,11 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Tata Innovation Center Knowledge Graph."
+description: "Tata Innovation Center Knowledge Handbook."
 permalink: /
 ---
 
-# Tata Innovation Center Knowledge Graph
+# Tata Innovation Center Knowledge Handbook
 
 ---
 

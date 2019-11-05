@@ -4,6 +4,7 @@ title: Adaboost
 mathjax: true
 parent: Machine Learning
 nav_order: 4
+date: 2019-11-04 12:00:00
 ---
 
 # Adaboost

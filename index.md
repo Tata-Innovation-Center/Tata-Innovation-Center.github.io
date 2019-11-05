@@ -13,9 +13,9 @@ permalink: /
 
 #### Tata Innovation Center Gang
 
-Yong Huang
+[Yong Huang](https://yonglhuang.com)
 
-Yimeng Wu
+[Yimeng Wu](https://bignova.github.io)
 
 Ang Zhou
 

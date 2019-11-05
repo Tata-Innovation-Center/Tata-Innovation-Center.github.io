@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UI Components
+title: Machine Learning
 nav_order: 3
 has_children: true
 permalink: /docs/ui-components

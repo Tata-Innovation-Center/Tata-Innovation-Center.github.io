@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Logistic Regression
-parent: Machine Learning
-nav_order: 1
+title: Buttons
+parent: UI Components
+nav_order: 2
 ---
 
 # Buttons

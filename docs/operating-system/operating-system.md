@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Machine Learning
+title: Operating system
 nav_order: 3
 has_children: true
-permalink: /docs/machine-learning
+permalink: /docs/operating-system
 ---
 
-# Machine Learning
+# Operating system
 
 In Writing
 {: .fs-6 .fw-300 }

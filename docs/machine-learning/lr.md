@@ -2,7 +2,7 @@
 layout: default
 title: Logistic regression
 parent: Machine Learning
-nav_order: 2
+nav_order: 1
 ---
 
 In writting...

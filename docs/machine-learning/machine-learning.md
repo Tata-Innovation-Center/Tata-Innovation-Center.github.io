@@ -3,10 +3,10 @@ layout: default
 title: Machine Learning
 nav_order: 3
 has_children: true
-permalink: /docs/ui-components
+permalink: /docs/machine-learning
 ---
 
-# UI Components
+# Machine Learning
 
-To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed.
+In Writing
 {: .fs-6 .fw-300 }

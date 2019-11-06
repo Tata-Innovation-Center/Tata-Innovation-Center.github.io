@@ -34,10 +34,9 @@ where the $$x$$ variables are observed at learning time in a dataset $$D$$ and t
 
 There are two reasons why we might want to use latent variable models.
 
-The simplest reason is that some data might be naturally unobserved. For example, if we are modeling a clinical trial, then some patients may drop out, and we won’t have their measurements. The methods in this chapter can be used to learn with this kind of missing data.
+The simplest reason is that some data might be naturally unobserved. For example, if we are modeling a clinical trial, then some patients may drop out, and we won’t have their measurements.
 
-However, the most important reason for studying LVMs is that they enable us to leverage our prior knowledge when defining a model. Our topic modeling example from the introduction illustrates this. We know that our set of news articles is actually a mixture of $$K$$
-distinct distributions (one for each topic); LVMs allow us to design a model that captures this.
+However, the most important reason for studying LVMs is that they enable us to leverage our prior knowledge when defining a model. 
 
 LVMs can also be viewed as increasing the expressive power of our model. In the case of GMMs (In the following section), the distribution that we can model using a mixture of Gaussian components is much more expressive than what we could have modeled using a single component.
 

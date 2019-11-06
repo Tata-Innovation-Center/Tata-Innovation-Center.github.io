@@ -75,7 +75,28 @@ To generate a new data point, we sample a cluster $$k$$ and then sample its Gaus
 <img src="https://user-images.githubusercontent.com/22668421/68343354-94e25780-00ba-11ea-9850-7e4532df42c2.png" style="border:none;width:100%">
 </div>
 
-## The Expectation-Maximization algorithm
+## The Expectation-Maximization algorithm in the context of GMM
 
 So how do we train a LVM? we should be maximizing the marginal log-likelihood of the data which can be written as:
+
+$$
+\log p(D)=\sum_{x \in D} \log p(x)=\sum_{x \in D} \log \left(\sum_{z} p(x | z) p(z)\right)
+$$
+
+Here, $$p(x)$$ is very easy to optimize if the distribution of $x$ can be written in some exponetial form, however, when we introduced latent variable $$z$$ here, the optimization of the right half of this equation became very hard and it non-convex.
+
+So how do we do the optimization, we will resort to EM algorithm.
+
+
+We can formally define the EM algorithm as follows. Let $$D$$ be our dataset.
+
+
+## EM in a general context.
+
+
+## Proof of convergence
+
+
+
+
 

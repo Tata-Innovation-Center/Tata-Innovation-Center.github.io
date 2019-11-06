@@ -21,12 +21,7 @@ date: 2019-11-04 12:00:00
 ## Latent variable models
 
 In our world, there are variables that can be observed and there are also variables that are unobservable.
-for example consider a probabilistic language model of news articles, Each article 
-$$x$$ typically focuses on a specific topic $$t$$. e.g. finance, sports, politics. Using this prior knowledge, we may build a more accurate model. and topic $$t$$ here is an unobserved variable because at this point we have no idea what topic it is.
-
-Since $$t$$ is unobserved, we cannot directly use the learning methods that we have so far. In fact, the unobserved variables make learning much more difficult.
-
-
+for example, your blood pressure, your blood sugar and glucose and are variable that can be meassured, however, your general health condition, is unobservable.
 
 More formally, a latent variable model (LVM) $$p$$ is a probability distribution over two sets of variables 
 $$x,z$$:

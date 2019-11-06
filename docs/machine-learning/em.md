@@ -21,7 +21,7 @@ date: 2019-11-04 12:00:00
 ## Latent variable models
 
 In our world, there are variables that can be observed and there are also variables that are unobservable.
-for example, your blood pressure, your blood sugar and glucose and are variable that can be meassured, however, your general health condition, is unobservable.
+for example, your blood pressure, your blood sugar and glucose and are variable that can be meassured, however, your overall health condition, is unobservable in some sense.
 
 More formally, a latent variable model (LVM) $$p$$ is a probability distribution over two sets of variables 
 $$x,z$$:

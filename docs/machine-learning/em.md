@@ -44,3 +44,15 @@ Gaussian mixture models (GMMs) are a good example of latent variable model.
 
 In a GMM, each data point is a tuple $$(x_{i},z_{i})$$ with $$x_{i} \in \mathbb{R}^{d}$$ and $$
 z_{i} \in\{1,2, \ldots, K\}$$, The joint probability is:
+
+$$
+p(x, z)=p(x | z) p(z)
+$$
+
+where $$p(z=k) = \pi_{k}$$ for some vector of class probabilities$$\pi \in \Delta_{K-1}$$ and 
+
+$$
+p(x | z=k)=\mathcal{N}\left(x ; \mu_{k}, \Sigma_{k}\right)
+$$
+
+is a multivariate Gaussian with mean and variance $$\mu_{k}$$, $\Sigma_{k}$

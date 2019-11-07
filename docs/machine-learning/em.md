@@ -82,7 +82,7 @@ $$
 \log p(D)=\sum_{x \in D} \log p(x)=\sum_{x \in D} \log \left(\sum_{z} p(x | z) p(z)\right)
 $$
 
-Here, $$p(x)$$ is very easy to optimize if the distribution of $x$ can be written in some exponetial form, however, when we introduced latent variable $$z$$ here, the optimization of the right half of this equation became very hard and it non-convex.
+Here, $$p(x)$$ is very easy to optimize if the distribution of $$x$$ can be written in some exponetial form, however, when we introduced latent variable $$z$$ here, the optimization of the right half of this equation became very hard and it non-convex.
 
 So how do we do the optimization, we will resort to EM algorithm.
 
@@ -98,6 +98,7 @@ We can formally define the EM algorithm as follows. Let $$D$$ be our dataset.
 $$
 \theta_{t+1}=\arg \max _{\theta} \sum_{x \in D} \mathbb{E}_{z \sim p\left(z | ; ; \theta_{t}\right)} \log p(x, z ; \theta)
 $$
+
 
 
 ## EM in a general context.

@@ -58,7 +58,7 @@ $$
 p(x | z=k)=\mathcal{N}\left(x ; \mu_{k}, \Sigma_{k}\right)
 $$
 
-is a multivariate Gaussian with mean and variance $$\mu_{k}$$, $\Sigma_{k}$
+is a multivariate Gaussian with mean and variance $$\mu_{k}$$, $$\Sigma_{k}$$
 
 This model postulates that our observed data is comprised of $$K$$ clusters with proportions specified by
 $$ \pi_{1},..., \pi_{K}$$; the distribution within each cluster is a Gaussian. We can see that $$p(x)$$
@@ -88,6 +88,16 @@ So how do we do the optimization, we will resort to EM algorithm.
 
 
 We can formally define the EM algorithm as follows. Let $$D$$ be our dataset.
+
+- Starting at an initial $$\theta_{0}$$, repeat until convergence for $$t = 1,2,...$$
+
+- E-step: For each $$x \in D$$, compute the posterior $$p\left(z | x ; \theta_{t}\right)$$
+
+- M-step: Compute new weights via
+
+$$
+\theta_{t+1}=\arg \max _{\theta} \sum_{x \in D} \mathbb{E}_{z \sim p\left(z | ; ; \theta_{t}\right)} \log p(x, z ; \theta)
+$$
 
 
 ## EM in a general context.

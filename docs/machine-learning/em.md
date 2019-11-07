@@ -141,7 +141,7 @@ p\left(x | z_{k} ; \theta\right)
 $$ equals $$Q_{k}(x)$$
 this objective equals the KL divergence between $$Q_{k}$$ and $$P$$, plus a constant. Thus, we may set the mean and variance $$
 \mu_{k}, \Sigma_{k}
-$$ to those of $$Q_{k$$, which are
+$$ to those of $$Q_{k}$$, which are
 
 $$
 \mu_{k}=\mu_{Q_{k}}=\sum_{x \in D} \frac{p\left(z_{k} | x ; \theta_{t}\right)}{\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)} x

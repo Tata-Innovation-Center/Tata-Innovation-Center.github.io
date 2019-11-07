@@ -127,10 +127,7 @@ $$ We have to find
 $$
 \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(x | z_{k} ; \theta\right)=c_{k} \cdot \mathbb{E}_{x \sim Q_{k}(x)} \log p\left(x | z_{k} ; \theta\right)
 $$
-
-
-
-where $$c_{k}=\sum_{x \in D} p\left(z_{k}|x;\theta_{t}\right)$$ is a constant that does not depend on $$\theta$$ and $$Q_{k}(x)$$ is a probability distribution defined over $$D$$ as
+where $$c_{k}=\sum_{x\in D} p\left(z_{k}|x;\theta_{t}\right)$$ is a constant that does not depend on $$\theta$$ and $$Q_{k}(x)$$ is a probability distribution defined over $$D$$ as
 
 $$
 Q_{k}(x)=\frac{p\left(z_{k} | x ; \theta_{t}\right)}{\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)}

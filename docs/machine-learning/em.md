@@ -91,7 +91,7 @@ We can formally define the EM algorithm as follows. Let $$D$$ be our dataset.
 
 - Starting at an initial $$\theta_{0}$$, repeat until convergence for $$t = 1,2,...$$
 
-- E-step: For each $$x \in D$$, compute the posterior $$p\left(z|x;\theta_{t}\right)$$
+- E-step: For each $$x\in D$$,compute the posterior $$p\left(z|x;\theta_{t}\right)$$
 
 - M-step: Compute new weights via
 
@@ -116,10 +116,10 @@ $$.
 
 At the M-step, we optimize the expected log-likelihood of our model.
 
+
 $$
 \begin{aligned} \theta_{t+1} &=\arg \max _{\theta} \sum_{x \in D} \mathbb{E}_{z \sim p\left(z | x ; \theta_{t}\right)} \log p(x, z ; \theta) \\ &=\arg \max _{\theta} \sum_{k=1}^{K} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(x | z_{k} ; \theta\right)+\sum_{k=1}^{K} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(z_{k} ; \theta\right) \end{aligned}
 $$
-
 
 We can optimize each of these terms separately. We will start with $$p\left(x|z_{k};\theta\right)=\mathcal{N}\left(x;\mu_{k},\Sigma_{k}\right)
 $$ We have to find 

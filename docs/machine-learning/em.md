@@ -91,7 +91,7 @@ We can formally define the EM algorithm as follows. Let $$D$$ be our dataset.
 
 - Starting at an initial $$\theta_{0}$$, repeat until convergence for $$t = 1,2,...$$
 
-- E-step: For each $$x \in D$$, compute the posterior $$p\left(z | x ; \theta_{t}\right)$$
+- E-step: For each $$x \in D$$, compute the posterior $$p\left(z|x;\theta_{t}\right)$$
 
 - M-step: Compute new weights via
 

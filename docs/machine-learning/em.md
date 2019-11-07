@@ -99,6 +99,67 @@ $$
 \theta_{t+1}=\arg \max _{\theta} \sum_{x \in D} \mathbb{E}_{z \sim p\left(z | ; ; \theta_{t}\right)} \log p(x, z ; \theta)
 $$
 
+ In the context of GMMs, Suppose we have a dataset $$D$$
+. In the E-step, we may compute the posterior for each data point $$x$$
+ as follows:
+
+ $$
+p\left(z | x ; \theta_{t}\right)=\frac{p\left(z, x ; \theta_{t}\right)}{p\left(x ; \theta_{t}\right)}=\frac{p\left(x | z ; \theta_{t}\right) p\left(z ; \theta_{t}\right)}{\sum_{k=1}^{K} p\left(x | z_{k} ; \theta_{t}\right) p\left(z_{k} ; \theta_{t}\right)}
+$$
+
+Note that each $$
+p\left(x | z_{k} ; \theta_{t}\right) p\left(z_{k} ; \theta_{t}\right)
+$$ is simply the probability that $$x$$ originates from component $$k$$ given the current set of parameters 
+$$\theta$$. After normalization, these form the $$K$$-dimensional vector of probabilities $$
+p\left(z | x ; \theta_{t}\right)
+$$.
+
+At the M-step, we optimize the expected log-likelihood of our model.
+
+$$
+\begin{aligned} \theta_{t+1} &=\arg \max _{\theta} \sum_{x \in D} \mathbb{E}_{z \sim p\left(z | x ; \theta_{t}\right)} \log p(x, z ; \theta) \\ &=\arg \max _{\theta} \sum_{k=1}^{K} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(x | z_{k} ; \theta\right)+\sum_{k=1}^{K} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(z_{k} ; \theta\right) \end{aligned}
+$$
+
+We can optimize each of these terms separately. We will start with $$
+p\left(x | z_{k} ; \theta\right)=\mathcal{N}\left(x ; \mu_{k}, \Sigma_{k}\right)
+$$ We have to find 
+
+$$
+\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(x | z_{k} ; \theta\right)=c_{k} \cdot \mathbb{E}_{x \sim Q_{k}(x)} \log p\left(x | z_{k} ; \theta\right)
+$$
+
+where $$c_{k}=\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)$$ is a constant that does not depend on $$\theta$$ and $$Q_{k}(x)$$ is a probability distribution defined over $$D$$ as
+
+$$
+Q_{k}(x)=\frac{p\left(z_{k} | x ; \theta_{t}\right)}{\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)}
+$$
+
+Now we know that $$
+\mathbb{E}_{x \sim Q_{k}(x)} \log p\left(x | z_{k} ; \theta\right)
+$$ is optimized when $$
+p\left(x | z_{k} ; \theta\right)
+$$ equals $$Q_{k}(x)$$
+this objective equals the KL divergence between $$Q_{k}$$ and $$P$$, plus a constant. Thus, we may set the mean and variance $$
+\mu_{k}, \Sigma_{k}
+$$ to those of $$Q_{k$$, which are
+
+$$
+\mu_{k}=\mu_{Q_{k}}=\sum_{x \in D} \frac{p\left(z_{k} | x ; \theta_{t}\right)}{\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)} x
+$$
+
+and  
+
+$$
+\Sigma_{k}=\Sigma_{Q_{k}}=\sum_{x \in D} \frac{p\left(z_{k} | x ; \theta_{t}\right)}{\sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)}\left(x-\mu_{Q_{k}}\right)\left(x-\mu_{Q_{k}}\right)^{T}
+$$
+
+Note how these are the just the mean and variance of the data, weighted by their cluster affinities! Similarly, we may find out that the class priors are
+
+$$
+\pi_{k}=\frac{1}{|D|} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right)
+$$
+
+
 
 
 ## EM in a general context.

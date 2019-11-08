@@ -67,8 +67,6 @@ Note that for $$k=2$$ events, this is just the definition of conditional probabi
 $$ P(S_1 \cap S_2) = P(S_1) P(S_2 | S_1) $$
 
 In general, the chain rule is derived by applying the definition of conditional probability multiple times, as in the following example:
-
-
 $$
 \begin{align*}
 & P(S_1 \cap S_2 \cap S_3 \cap S_4) \\
@@ -77,6 +75,7 @@ $$
 &= P(S_1) P(S_2 \mid S_1) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3)
 \end{align*}
 $$
+
 
 ## 1.3 Independence
 

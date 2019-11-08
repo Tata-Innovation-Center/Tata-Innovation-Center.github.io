@@ -165,12 +165,7 @@ The variance of a random variable $$X$$ is a measure of how concentrated the dis
 Using the **properties** in the previous section, we can derive an alternate expression for the variance:
 
 $$
-\begin{align*}
-& \E[(X - \E[X])^2] \\
-&= \E[X^2 - 2\E[X]X + \E[X]^2] \\
-&= \E[X^2] - 2\E[X]\E[X] + \E[X]^2 \\
-&= \E[X^2] - \E[X]^2
-\end{align*}
+\begin{array}{l}{\mathbb{E}\left[(X-\mathbb{E}[X])^{2}\right]} \\ {=\mathbb{E}\left[X^{2}-2 \mathbb{E}[X] X+\mathbb{E}[X]^{2}\right]} \\ {=\mathbb{E}\left[X^{2}\right]-2 \mathbb{E}[X] \mathbb{E}[X]+\mathbb{E}[X]^{2}} \\ {=\mathbb{E}\left[X^{2}\right]-\mathbb{E}[X]^{2}}\end{array}
 $$
 
 where the second equality follows from linearity of expectations and the fact that $$\E[X]$$ is actually a

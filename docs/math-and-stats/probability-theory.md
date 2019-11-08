@@ -67,15 +67,11 @@ Note that for $$k=2$$ events, this is just the definition of conditional probabi
 $$ P(S_1 \cap S_2) = P(S_1) P(S_2 | S_1) $$
 
 In general, the chain rule is derived by applying the definition of conditional probability multiple times, as in the following example:
-$$
-\begin{align*}
-& P(S_1 \cap S_2 \cap S_3 \cap S_4) \\
-&= P(S_1 \cap S_2 \cap S_3) P(S_4 \mid S_1 \cap S_2 \cap S_3) \\
-&= P(S_1 \cap S_2) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3) \\
-&= P(S_1) P(S_2 \mid S_1) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3)
-\end{align*}
-$$
 
+
+$$
+\begin{array}{l}{P\left(S_{1} \cap S_{2} \cap S_{3} \cap S_{4}\right)} \\ {=P\left(S_{1} \cap S_{2} \cap S_{3}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)} \\ {=P\left(S_{1} \cap S_{2}\right) P\left(S_{3} | S_{1} \cap S_{2}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)} \\ {=P\left(S_{1}\right) P\left(S_{2} | S_{1}\right) P\left(S_{3} | S_{1} \cap S_{2}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)}\end{array}
+$$
 
 ## 1.3 Independence
 

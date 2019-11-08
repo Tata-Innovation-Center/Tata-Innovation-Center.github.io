@@ -178,11 +178,7 @@ constant with respect to the outer expectation.
 **Example**: Calculate the mean and the variance of the uniform random variable $$X$$ with PDF $$f_X(x) = 1, \forall x \in [0, 1], 0$$ elsewhere.
 
 $$
-\begin{align*}
-\E[X] &= \int^{\infty}_{-\infty} x f_X(x) dx = \int^1_0 x dx = \frac{1}{2} \\
-\E[X^2] &= \int^{\infty}_{-\infty} x^2 f_X(x)dx = \int^1_0 x^2 dx = \frac{1}{3} \\
-Var[X] &= \E[X^2] - \E[X]^2 = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}
-\end{align*}
+\begin{aligned} \mathbb{E}[X] &=\int_{-\infty}^{\infty} x f_{X}(x) d x=\int_{0}^{1} x d x=\frac{1}{2} \\ \mathbb{E}\left[X^{2}\right] &=\int_{-\infty}^{\infty} x^{2} f_{X}(x) d x=\int_{0}^{1} x^{2} d x=\frac{1}{3} \\ \operatorname{Var}[X] &=\mathbb{E}\left[X^{2}\right]-\mathbb{E}[X]^{2}=\frac{1}{3}-\frac{1}{4}=\frac{1}{12} \end{aligned}
 $$
 
 **Example**: Suppose that $$g(x) = \mathbf{1}\{x \in A\}$$ for some subset $$A \subseteq \Omega$$. What is $$\E[g(X)]$$?

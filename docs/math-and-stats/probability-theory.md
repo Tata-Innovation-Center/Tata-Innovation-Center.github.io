@@ -98,9 +98,9 @@ $$
 
 In order to specify the probability measures used when dealing with random variables, it is often convenient to specify alternative functions (CDFs, PDFs, and PMFs) from which the probability measure governing an experiment immediately follows. In this section and the next two sections, we describe each of these types of functions in turn. A **cumulative distribution function** (CDF) is a function $$F_X : \Re \to [0, 1]$$ which specifies a probability measure as
 
-$$ F_X(x) = P(X \leq x). $$
+$$F_X(x) = P(X \leq x).$$
 
-By using this function, one can calculate the probability that $$X$$ takes on a value between any two real constants $$a$$ and $$b$$ ,where $$a<b$$.
+By using this function, one can calculate the probability that $$X$$ takes on a value between any two real constants $$a$$ and $$b$$.
 
 ### **Properties**:
 <!--Figure 1: A cumulative distribution function (CDF).-->

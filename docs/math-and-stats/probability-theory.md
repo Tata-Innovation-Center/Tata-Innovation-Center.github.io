@@ -90,10 +90,7 @@ More formally, a random variable $$X$$ is a function $$X : \Omega \to \Re$$. Typ
 When describing the event that a random variable takes on a certain value, we often use the **indicator function** $$\mathbf{1}\{A\}$$ which takes value 1 when event $$A$$ happens and 0 otherwise. For example, for a random variable $$X$$,
 
 $$
-    \mathbf{1}\{X > 3\} = \begin{cases}
-    1, & \text{if }X > 3 \\
-    0, & \text{otherwise}
-    \end{cases}
+\mathbf{1}\{X>3\}=\left\{\begin{array}{ll}{1,} & {\text { if } X>3} \\ {0,} & {\text { otherwise }}\end{array}\right.
 $$
 
 

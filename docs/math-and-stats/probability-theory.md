@@ -197,10 +197,7 @@ $$
 - **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability $$p$$.
 
 $$
-p(x) = \begin{cases}
-p, & \text{if }x = 1 \\
-1-p, & \text{if }x = 0
-\end{cases}
+p(x)=\left\{\begin{array}{ll}{p,} & {\text { if } x=1} \\ {1-p,} & {\text { if } x=0}\end{array}\right.
 $$
 
 - **$$X \sim \text{Binomial}(n, p)$$** (where $$0 \leq p \leq 1$$): the number of heads in $$n$$ independent flips of a coin with heads probability $$p$$.
@@ -220,19 +217,13 @@ $$ p(x) = e^{-\lambda} \frac{\lambda^x}{x!} $$
 - **$$X \sim \text{Uniform}(a, b)$$** (where $$a < b$$): equal probability density to every value between $$a$$ and $$b$$ on the real line.
 
 $$
-f(x) = \begin{cases}
-    \frac{1}{b-a}, & \text{if }a \leq b \\
-    0, & \text{otherwise}
-\end{cases}
+f(x)=\left\{\begin{array}{ll}{\frac{1}{b-a},} & {\text { if } a \leq b} \\ {0,} & {\text { otherwise }}\end{array}\right.
 $$
 
 - **$$X \sim \text{Exponential}(\lambda)$$** (where $$\lambda$$ > 0): decaying probability density over the nonnegative reals.
 
 $$
-f(x) = \begin{cases}
-    \lambda e^{-\lambda x}, & \text{if }x \geq 0 \\
-    0, & \text{otherwise}
-\end{cases}
+f(x)=\left\{\begin{array}{ll}{\lambda e^{-\lambda x},} & {\text { if } x \geq 0} \\ {0,} & {\text { otherwise }}\end{array}\right.
 $$
 
 - **$$X \sim \text{Normal}(\mu, \sigma^2)$$**: also known as the Gaussian distribution

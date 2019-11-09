@@ -7,10 +7,9 @@ mathjax: true
 date: 2019-11-09 12:00:00
 ---
 
-# Python List
+## Python List
 
-1. list.index(a) 的时间复杂度是O(n)， 从头往后搜索，返回index。
-2. list[:] 是常见的list copy，list[:] 和 list[a:b] 都会创建一个新的list。
-3. list.pop() 移除并返回最后一个，时间复杂度O(1)；list.pop(0) 移除并返回第一个，然后将后面的元素全部往前移了一格，时间复杂度O(n)。
-
-{: .fs-6 .fw-300 }
+1. list.index(elt) search the elt and return the index with Time Complexity O(n).
+2. list[:] returns a shallow copy of list, equivalent to "list.copy()", "list(list)", "copy.copy(list)"; If the list contain objects, you can use deep copy "copy.deepcopy(list)".
+3. list[:] and list[i,j] return an new list for sure.
+4. list.pop() remove and return the last element in the list，Time Complexity O(1)；list.pop(0) remove and return the first element in the list，BUT then move the following element 1 position up, Time Complexity O(n).

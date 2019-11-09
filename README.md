@@ -2,7 +2,7 @@
 
 ## 介绍/Introduction
 
-一个知识（和生活？）整理Blog
+一个知识整理（和生活分享？）Blog
 
 presented by 塔塔创新中心/TATA Innovation Center Gang (TICG)
 

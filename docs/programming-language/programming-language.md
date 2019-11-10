@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Python
+title: Programming Language
 nav_order: 3
 has_children: true
 mathjax: true
-permalink: /docs/Python
+permalink: /docs/programming-language
 date: 2019-11-09 12:00:00
 ---
 

@@ -110,7 +110,7 @@ We haven't exactly defined what we mean by "hallucinating" the data. The full de
 
 By "hallucinating" the data, we mean computing the expected log-likelihood
 
-$$ \E_{z \sim p(z|x)} \log p(x,z; \theta). $$
+$$ E_{z \sim p(z|x)} \log p(x,z; \theta). $$
 
 This expectation is what gives the EM algorithm half of its name. If $$z$$ is not too high-dimensional (e.g. in GMMs it is a one-dimensional categorical variable), then we can compute this expectation.
 
@@ -123,7 +123,7 @@ We can formally define the EM algorithm as follows. Let $$D$$ be our dataset.
 - *M-Step*: Compute new weights via
 
 $$
-\theta_{t+1} = \arg\max_\theta \sum_{x \in D} \E_{z \sim p(z|x; \theta_t)} \log p(x,z; \theta).
+\theta_{t+1} = \arg\max_\theta \sum_{x \in D} E_{z \sim p(z|x; \theta_t)} \log p(x,z; \theta).
 $$
 
 ### Example: Gaussian mixture models

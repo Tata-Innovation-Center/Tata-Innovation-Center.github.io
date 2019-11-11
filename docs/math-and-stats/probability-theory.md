@@ -249,10 +249,7 @@ It can be shown that by knowing the joint cumulative distribution function, the 
 The joint CDF $$F_{XY} (x, y)$$ and the cumulative distribution functions $$F_X(x)$$ and $$F_Y (y)$$ of each variable separately are related by
 
 $$
-\begin{align*}
-F_X(x) &= \lim_{y \to \infty} F_{XY} (x, y) \\
-F_Y(y) &= \lim_{x \to \infty} F_{XY} (x, y)
-\end{align*}
+\begin{array}{l}{F_{X}(x)=\lim _{y \rightarrow \infty} F_{X Y}(x, y)} \\ {F_{Y}(y)=\lim _{x \rightarrow \infty} F_{X Y}(x, y)}\end{array}
 $$
 
 Here, we call $$F_X(x)$$ and $$F_Y(y)$$ the **marginal cumulative distribution functions** of $$F_{XY} (x, y)$$.
@@ -315,10 +312,7 @@ provided $$f_X(x) \neq 0$$.
 The chain rule we derived earlier for events can be applied to random variables as follows:
 
 $$
-\begin{align*}
-& p_{X_1, \cdots X_n} (x_1, \cdots, x_n) \\
-&= p_{X_1} (x_1) p_{X_2 \mid X_1} (x_2 \mid x_1) \cdots p_{X_n \mid X_1, \cdots, X_{n-1}} (x_n \mid x_1, \cdots, x_{n-1})
-\end{align*}
+\begin{array}{l}{p_{X_{1}}, \cdots X_{n}\left(x_{1}, \cdots, x_{n}\right)} \\ {=p_{X_{1}}\left(x_{1}\right) p_{X_{2} | X_{1}}\left(x_{2} | x_{1}\right) \cdots p_{X_{n} | X_{1}, \cdots, X_{n-1}}\left(x_{n} | x_{1}, \cdots, x_{n-1}\right)}\end{array}
 $$
 
 ## 3.6 Bayes' rule
@@ -358,37 +352,31 @@ By using the above lemma one can prove that if $$X$$ is independent of $$Y$$ the
 Suppose that we have two discrete random variables $$X, Y$$ and $$g : \Re^2 \to \Re$$ is a function of these two random variables. Then the expected value of $$g$$ is defined as
 
 $$
-\E[g(X,Y)] = \sum_{x \in Val(X)} \sum_{y \in Val(Y)} g(x, y)p_{XY}(x, y).
+E[g(X,Y)] = \sum_{x \in Val(X)} \sum_{y \in Val(Y)} g(x, y)p_{XY}(x, y).
 $$
 
 For continuous random variables $$X, Y$$, the analogous expression is
 
 $$
-\E[g(X, Y)] = \int^{\infty}_{-\infty} \int^{\infty}_{-\infty} g(x, y)f_{XY}(x, y)dxdy.
+E[g(X, Y)] = \int^{\infty}_{-\infty} \int^{\infty}_{-\infty} g(x, y)f_{XY}(x, y)dxdy.
 $$
 
 We can use the concept of expectation to study the relationship of two random variables with each other. In particular, the covariance of two random variables $$X$$ and $$Y$$ is defined as
 
-$$ Cov[X, Y] = \E[(X - \E[X])(Y - \E[Y])] $$
+$$ Cov[X, Y] = E[(X - E[X])(Y - E[Y])] $$
 
 Using an argument similar to that for variance, we can rewrite this as
 
 $$
-\begin{align*}
-Cov[X, Y]
-&= \E[(X - \E[X])(Y - \E[Y])] \\
-&= \E[XY - X\E[Y] - Y \E[X] + \E[X]\E[Y]] \\
-&= \E[XY] - \E[X]\E[Y] - \E[Y]\E[X] + \E[X]\E[Y] \\
-&= \E[XY] - \E[X]\E[Y].
-\end{align*}
+\begin{aligned} \operatorname{Cov}[X, Y] &=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])] \\ &=\mathbb{E}[X Y-X \mathbb{E}[Y]-Y \mathbb{E}[X]+\mathbb{E}[X] \mathbb{E}[Y]] \\ &=\mathbb{E}[X Y]-\mathbb{E}[X] \mathbb{E}[Y]-\mathbb{E}[Y] \mathbb{E}[X]+\mathbb{E}[X] \mathbb{E}[Y] \\ &=\mathbb{E}[X Y]-\mathbb{E}[X] \mathbb{E}[Y] \end{aligned}
 $$
 
-Here, the key step in showing the equality of the two forms of covariance is in the third equality, where we use the fact that $$\E[X]$$ and $$\E[Y]$$ are actually constants which can be pulled out of the expectation. When $$Cov[X, Y] = 0$$, we say that $$X$$ and $$Y$$ are uncorrelated.
+Here, the key step in showing the equality of the two forms of covariance is in the third equality, where we use the fact that $$E[X]$$ and $$E[Y]$$ are actually constants which can be pulled out of the expectation. When $$Cov[X, Y] = 0$$, we say that $$X$$ and $$Y$$ are uncorrelated.
 
 ### **Properties**:
-- (Linearity of expectation) $$\E[f(X, Y) + g(X, Y)] = \E[f(X, Y)] + \E[g(X, Y)]$$.
+- (Linearity of expectation) $$E[f(X, Y) + g(X, Y)] = E[f(X, Y)] + E[g(X, Y)]$$.
 - $$Var[X + Y] = Var[X] + Var[Y] + 2Cov[X, Y]$$.
 - If $$X$$ and $$Y$$ are independent, then $$Cov[X, Y] = 0$$.
-- If $$X$$ and $$Y$$ are independent, then $$\E[f(X)g(Y)] = \E[f(X)]\E[g(Y)]$$.
+- If $$X$$ and $$Y$$ are independent, then $$E[f(X)g(Y)] = E[f(X)]E[g(Y)]$$.
 
 

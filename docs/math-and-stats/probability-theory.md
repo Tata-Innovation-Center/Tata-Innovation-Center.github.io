@@ -160,20 +160,15 @@ Intuitively, the expectation of $$g(X)$$ can be thought of as a "weighted averag
 
 ## 2.5 Variance
 
-The variance of a random variable $$X$$ is a measure of how concentrated the distribution of a random variable $$X$$ is around its mean. Formally, the variance of a random variable $$X$$ is defined as $$Var[X] = \E[(X - \E[X])^2]$$.
+The variance of a random variable $$X$$ is a measure of how concentrated the distribution of a random variable $$X$$ is around its mean. Formally, the variance of a random variable $$X$$ is defined as $$Var[X] = E[(X - E[X])^2]$$.
 
 Using the **properties** in the previous section, we can derive an alternate expression for the variance:
 
 $$
-\begin{align*}
-& \E[(X - \E[X])^2] \\
-&= \E[X^2 - 2\E[X]X + \E[X]^2] \\
-&= \E[X^2] - 2\E[X]\E[X] + \E[X]^2 \\
-&= \E[X^2] - \E[X]^2
-\end{align*}
+\begin{array}{l}{\mathbb{E}\left[(X-\mathbb{E}[X])^{2}\right]} \\ {=\mathbb{E}\left[X^{2}-2 \mathbb{E}[X] X+\mathbb{E}[X]^{2}\right]} \\ {=\mathbb{E}\left[X^{2}\right]-2 \mathbb{E}[X] \mathbb{E}[X]+\mathbb{E}[X]^{2}} \\ {=\mathbb{E}\left[X^{2}\right]-\mathbb{E}[X]^{2}}\end{array}
 $$
 
-where the second equality follows from linearity of expectations and the fact that $$\E[X]$$ is actually a
+where the second equality follows from linearity of expectations and the fact that $$E[X]$$ is actually a
 constant with respect to the outer expectation.
 
 ### **Properties**:
@@ -183,25 +178,21 @@ constant with respect to the outer expectation.
 **Example**: Calculate the mean and the variance of the uniform random variable $$X$$ with PDF $$f_X(x) = 1, \forall x \in [0, 1], 0$$ elsewhere.
 
 $$
-\begin{align*}
-\E[X] &= \int^{\infty}_{-\infty} x f_X(x) dx = \int^1_0 x dx = \frac{1}{2} \\
-\E[X^2] &= \int^{\infty}_{-\infty} x^2 f_X(x)dx = \int^1_0 x^2 dx = \frac{1}{3} \\
-Var[X] &= \E[X^2] - \E[X]^2 = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}
-\end{align*}
+\begin{aligned} \mathbb{E}[X] &=\int_{-\infty}^{\infty} x f_{X}(x) d x=\int_{0}^{1} x d x=\frac{1}{2} \\ \mathbb{E}\left[X^{2}\right] &=\int_{-\infty}^{\infty} x^{2} f_{X}(x) d x=\int_{0}^{1} x^{2} d x=\frac{1}{3} \\ \operatorname{Var}[X] &=\mathbb{E}\left[X^{2}\right]-\mathbb{E}[X]^{2}=\frac{1}{3}-\frac{1}{4}=\frac{1}{12} \end{aligned}
 $$
 
-**Example**: Suppose that $$g(x) = \mathbf{1}\{x \in A\}$$ for some subset $$A \subseteq \Omega$$. What is $$\E[g(X)]$$?
+**Example**: Suppose that $$g(x) = \mathbf{1}\{x \in A\}$$ for some subset $$A \subseteq \Omega$$. What is $$E[g(X)]$$?
 
 - Discrete case:
 
 $$
-\E[g(X)] = \sum_{x \in Val(X)} \mathbf{1}\{x \in A \} P_X(x) = \sum_{x \in A} P_X(x) = P(X \in A)
+E[g(X)] = \sum_{x \in Val(X)} \mathbf{1}\{x \in A \} P_X(x) = \sum_{x \in A} P_X(x) = P(X \in A)
 $$
 
 - Continuous case:
 
 $$
-\E[g(X)] = \int_{-\infty}^\infty \mathbf{1}\{x \in A \} f_X(x) dx = \int_{x\in A} f_X(x) dx = P(X \in A)
+E[g(X)] = \int_{-\infty}^\infty \mathbf{1}\{x \in A \} f_X(x) dx = \int_{x\in A} f_X(x) dx = P(X \in A)
 $$
 
 
@@ -211,10 +202,7 @@ $$
 - **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability $$p$$.
 
 $$
-p(x) = \begin{cases}
-p, & \text{if }x = 1 \\
-1-p, & \text{if }x = 0
-\end{cases}
+p(x)=\left\{\begin{array}{ll}{p,} & {\text { if } x=1} \\ {1-p,} & {\text { if } x=0}\end{array}\right.
 $$
 
 - **$$X \sim \text{Binomial}(n, p)$$** (where $$0 \leq p \leq 1$$): the number of heads in $$n$$ independent flips of a coin with heads probability $$p$$.
@@ -234,19 +222,13 @@ $$ p(x) = e^{-\lambda} \frac{\lambda^x}{x!} $$
 - **$$X \sim \text{Uniform}(a, b)$$** (where $$a < b$$): equal probability density to every value between $$a$$ and $$b$$ on the real line.
 
 $$
-f(x) = \begin{cases}
-    \frac{1}{b-a}, & \text{if }a \leq b \\
-    0, & \text{otherwise}
-\end{cases}
+f(x)=\left\{\begin{array}{ll}{\frac{1}{b-a},} & {\text { if } a \leq b} \\ {0,} & {\text { otherwise }}\end{array}\right.
 $$
 
 - **$$X \sim \text{Exponential}(\lambda)$$** (where $$\lambda$$ > 0): decaying probability density over the nonnegative reals.
 
 $$
-f(x) = \begin{cases}
-    \lambda e^{-\lambda x}, & \text{if }x \geq 0 \\
-    0, & \text{otherwise}
-\end{cases}
+f(x)=\left\{\begin{array}{ll}{\lambda e^{-\lambda x},} & {\text { if } x \geq 0} \\ {0,} & {\text { otherwise }}\end{array}\right.
 $$
 
 - **$$X \sim \text{Normal}(\mu, \sigma^2)$$**: also known as the Gaussian distribution

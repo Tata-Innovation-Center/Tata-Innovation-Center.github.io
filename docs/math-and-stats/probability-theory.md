@@ -199,7 +199,7 @@ $$
 ## 2.6 Some common random variables
 
 ### Discrete random variables
-- **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability $$p$$.
+- **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability p.
 
 
 $$

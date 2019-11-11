@@ -57,10 +57,7 @@ In other words, $$P(A \mid B)$$ is the probability measure of the event $$A$$ af
 Let $$S_1, \dotsc, S_k$$ be events, $$P(S_i) >0$$. Then the chain rule states that:
 
 $$
-\begin{align*}
-& P(S_1 \cap S_2 \cap \dotsb \cap S_k) \\
-&= P(S_1) P(S_2 | S_1) P(S_3 | S_2 \cap S_1 ) \dotsb P(S_k | S_1 \cap S_2 \cap \dotsb \cap S_{k-1})
-\end{align*}
+\begin{array}{l}{P\left(S_{1} \cap S_{2} \cap \cdots \cap S_{k}\right)} \\ {=P\left(S_{1}\right) P\left(S_{2} | S_{1}\right) P\left(S_{3} | S_{2} \cap S_{1}\right) \cdots P\left(S_{k} | S_{1} \cap S_{2} \cap \cdots \cap S_{k-1}\right)}\end{array}
 $$
 
 Note that for $$k=2$$ events, this is just the definition of conditional probability:
@@ -70,12 +67,7 @@ $$ P(S_1 \cap S_2) = P(S_1) P(S_2 | S_1) $$
 In general, the chain rule is derived by applying the definition of conditional probability multiple times, as in the following example:
 
 $$
-\begin{align*}
-& P(S_1 \cap S_2 \cap S_3 \cap S_4) \\
-&= P(S_1 \cap S_2 \cap S_3) P(S_4 \mid S_1 \cap S_2 \cap S_3) \\
-&= P(S_1 \cap S_2) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3) \\
-&= P(S_1) P(S_2 \mid S_1) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3)
-\end{align*}
+\begin{array}{l}{P\left(S_{1} \cap S_{2} \cap S_{3} \cap S_{4}\right)} \\ {=P\left(S_{1} \cap S_{2} \cap S_{3}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)} \\ {=P\left(S_{1} \cap S_{2}\right) P\left(S_{3} | S_{1} \cap S_{2}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)} \\ {=P\left(S_{1}\right) P\left(S_{2} | S_{1}\right) P\left(S_{3} | S_{1} \cap S_{2}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)}\end{array}
 $$
 
 ## 1.3 Independence
@@ -108,7 +100,7 @@ In order to specify the probability measures used when dealing with random varia
 
 $$ F_X(x) = P(X \leq x). $$
 
-By using this function, one can calculate the probability that $$X$$ takes on a value between any two real constants $$a$$ and $$b$$ (where $$a < b$$).
+By using this function, one can calculate the probability that $$X$$ takes on a value between any two real constants $$a$$ and $$b$$.
 
 ### **Properties**:
 <!--Figure 1: A cumulative distribution function (CDF).-->
@@ -151,19 +143,19 @@ Both CDFs and PDFs (when they exist) can be used for calculating the probabiliti
 
 Suppose that $$X$$ is a discrete random variable with PMF $$p_X(x)$$ and $$g : \Re \to \Re$$ is an arbitrary function. In this case, $$g(X)$$ can be considered a random variable, and we define the **expectation** or **expected value** of $$g(X)$$ as
 
-$$ \E[g(X)] = \sum_{x \in Val(X)} g(x)p_X(x). $$
+$$ E[g(X)] = \sum_{x \in Val(X)} g(x)p_X(x). $$
 
 If $$X$$ is a continuous random variable with PDF $$f_X(x)$$, then the expected value of g(X) is defined as
 
-$$ \E[g(X)] = \int^{\infty}_{-\infty} g(x)f_X(x)dx. $$
+$$ E[g(X)] = \int^{\infty}_{-\infty} g(x)f_X(x)dx. $$
 
-Intuitively, the expectation of $$g(X)$$ can be thought of as a "weighted average" of the values that $$g(x)$$ can taken on for different values of $$x$$, where the weights are given by $$p_X(x)$$ or $$f_X(x)$$. As a special case of the above, note that the expectation, $$\E[X]$$ of a random variable itself is found by letting $$g(x) = x$$; this is also known as the mean of the random variable $$X$$.
+Intuitively, the expectation of $$g(X)$$ can be thought of as a "weighted average" of the values that $$g(x)$$ can taken on for different values of $$x$$, where the weights are given by $$p_X(x)$$ or $$f_X(x)$$. As a special case of the above, note that the expectation, $$E[X]$$ of a random variable itself is found by letting $$g(x) = x$$; this is also known as the mean of the random variable $$X$$.
 
 ### **Properties**:
-- $$\E[a] = a$$ for any constant $$a \in \Re$$.
-- $$\E[af(X)] = a\E[f(X)]$$ for any constant $$a \in \Re$$.
-- (Linearity of Expectation) $$\E[f(X) + g(X)] = \E[f(X)] + \E[g(X)]$$.
-- For a discrete random variable $$X$$, $$\E[\mathbf{1}\{X = k\}] = P(X = k)$$.
+- $$E[a] = a$$ for any constant $$a \in \Re$$.
+- $$E[af(X)] = aE[f(X)]$$ for any constant $$a \in \Re$$.
+- (Linearity of Expectation) $$E[f(X) + g(X)] = E[f(X)] + E[g(X)]$$.
+- For a discrete random variable $$X$$, $$E[\mathbf{1}\{X = k\}] = P(X = k)$$.
 
 
 ## 2.5 Variance

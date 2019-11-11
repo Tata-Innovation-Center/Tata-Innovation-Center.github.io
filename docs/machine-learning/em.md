@@ -152,7 +152,7 @@ We can optimize each of these terms separately. We will start with $$p(x\mid z_k
 
 $$
 \sum_{x \in D} p(z_k|x; \theta_t) \log p(x|z_k; \theta)
-= c_k \cdot \E_{x \sim Q_k(x)} \log p(x|z_k; \theta),
+= c_k \cdot E_{x \sim Q_k(x)} \log p(x|z_k; \theta),
 $$
 
 where $$c_k = \sum_{x \in D} p(z_k \mid x; \theta_t)$$ is a constant that does not depend on $$\theta$$ and $$Q_k(x)$$ is a probability distribution defined over $$D$$ as

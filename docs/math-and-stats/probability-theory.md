@@ -17,6 +17,7 @@ date: 2019-11-07 12:00:00
 {:toc}
 
 ---
+
 We will go through a review of probability concepts over here, all of the review materials have been adapted from [CS229 Probability Notes](http://cs229.stanford.edu/section/cs229-prob.pdf).
 
 # 1. Elements of probability
@@ -68,9 +69,13 @@ $$ P(S_1 \cap S_2) = P(S_1) P(S_2 | S_1) $$
 
 In general, the chain rule is derived by applying the definition of conditional probability multiple times, as in the following example:
 
-
 $$
-\begin{array}{l}{P\left(S_{1} \cap S_{2} \cap S_{3} \cap S_{4}\right)} \\ {=P\left(S_{1} \cap S_{2} \cap S_{3}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)} \\ {=P\left(S_{1} \cap S_{2}\right) P\left(S_{3} | S_{1} \cap S_{2}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)} \\ {=P\left(S_{1}\right) P\left(S_{2} | S_{1}\right) P\left(S_{3} | S_{1} \cap S_{2}\right) P\left(S_{4} | S_{1} \cap S_{2} \cap S_{3}\right)}\end{array}
+\begin{align*}
+& P(S_1 \cap S_2 \cap S_3 \cap S_4) \\
+&= P(S_1 \cap S_2 \cap S_3) P(S_4 \mid S_1 \cap S_2 \cap S_3) \\
+&= P(S_1 \cap S_2) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3) \\
+&= P(S_1) P(S_2 \mid S_1) P(S_3 \mid S_1 \cap S_2) P(S_4 \mid S_1 \cap S_2 \cap S_3)
+\end{align*}
 $$
 
 ## 1.3 Independence
@@ -90,7 +95,10 @@ More formally, a random variable $$X$$ is a function $$X : \Omega \to \Re$$. Typ
 When describing the event that a random variable takes on a certain value, we often use the **indicator function** $$\mathbf{1}\{A\}$$ which takes value 1 when event $$A$$ happens and 0 otherwise. For example, for a random variable $$X$$,
 
 $$
-\mathbf{1}\{X>3\}=\left\{\begin{array}{ll}{1,} & {\text { if } X>3} \\ {0,} & {\text { otherwise }}\end{array}\right.
+    \mathbf{1}\{X > 3\} = \begin{cases}
+    1, & \text{if }X > 3 \\
+    0, & \text{otherwise}
+    \end{cases}
 $$
 
 
@@ -98,9 +106,9 @@ $$
 
 In order to specify the probability measures used when dealing with random variables, it is often convenient to specify alternative functions (CDFs, PDFs, and PMFs) from which the probability measure governing an experiment immediately follows. In this section and the next two sections, we describe each of these types of functions in turn. A **cumulative distribution function** (CDF) is a function $$F_X : \Re \to [0, 1]$$ which specifies a probability measure as
 
-$$F_X(x) = P(X \leq x).$$
+$$ F_X(x) = P(X \leq x). $$
 
-By using this function, one can calculate the probability that $$X$$ takes on a value between any two real constants $$a$$ and $$b$$.
+By using this function, one can calculate the probability that $$X$$ takes on a value between any two real constants $$a$$ and $$b$$ (where $$a < b$$).
 
 ### **Properties**:
 <!--Figure 1: A cumulative distribution function (CDF).-->
@@ -165,7 +173,12 @@ The variance of a random variable $$X$$ is a measure of how concentrated the dis
 Using the **properties** in the previous section, we can derive an alternate expression for the variance:
 
 $$
-\begin{array}{l}{\mathbb{E}\left[(X-\mathbb{E}[X])^{2}\right]} \\ {=\mathbb{E}\left[X^{2}-2 \mathbb{E}[X] X+\mathbb{E}[X]^{2}\right]} \\ {=\mathbb{E}\left[X^{2}\right]-2 \mathbb{E}[X] \mathbb{E}[X]+\mathbb{E}[X]^{2}} \\ {=\mathbb{E}\left[X^{2}\right]-\mathbb{E}[X]^{2}}\end{array}
+\begin{align*}
+& \E[(X - \E[X])^2] \\
+&= \E[X^2 - 2\E[X]X + \E[X]^2] \\
+&= \E[X^2] - 2\E[X]\E[X] + \E[X]^2 \\
+&= \E[X^2] - \E[X]^2
+\end{align*}
 $$
 
 where the second equality follows from linearity of expectations and the fact that $$\E[X]$$ is actually a
@@ -175,6 +188,15 @@ constant with respect to the outer expectation.
 - $$Var[a] = 0$$ for any constant $$a \in \Re$$.
 - $$Var[af(X)] = a^2 Var[f(X)]$$ for any constant $$a \in \Re$$.
 
+**Example**: Calculate the mean and the variance of the uniform random variable $$X$$ with PDF $$f_X(x) = 1, \forall x \in [0, 1], 0$$ elsewhere.
+
+$$
+\begin{align*}
+\E[X] &= \int^{\infty}_{-\infty} x f_X(x) dx = \int^1_0 x dx = \frac{1}{2} \\
+\E[X^2] &= \int^{\infty}_{-\infty} x^2 f_X(x)dx = \int^1_0 x^2 dx = \frac{1}{3} \\
+Var[X] &= \E[X^2] - \E[X]^2 = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}
+\end{align*}
+$$
 
 **Example**: Suppose that $$g(x) = \mathbf{1}\{x \in A\}$$ for some subset $$A \subseteq \Omega$$. What is $$\E[g(X)]$$?
 
@@ -194,10 +216,13 @@ $$
 ## 2.6 Some common random variables
 
 ### Discrete random variables
-- **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability p.
+- **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability $$p$$.
 
 $$
-p(x)=\left\{\begin{array}{ll}{p,} & {\text { if } x=1} \\ {1-p,} & {\text { if } x=0}\end{array}\right.
+p(x) = \begin{cases}
+    p, & \text{if }x = 1 \\
+    1-p, & \text{if }x = 0
+\end{cases}
 $$
 
 - **$$X \sim \text{Binomial}(n, p)$$** (where $$0 \leq p \leq 1$$): the number of heads in $$n$$ independent flips of a coin with heads probability $$p$$.
@@ -217,13 +242,19 @@ $$ p(x) = e^{-\lambda} \frac{\lambda^x}{x!} $$
 - **$$X \sim \text{Uniform}(a, b)$$** (where $$a < b$$): equal probability density to every value between $$a$$ and $$b$$ on the real line.
 
 $$
-f(x)=\left\{\begin{array}{ll}{\frac{1}{b-a},} & {\text { if } a \leq b} \\ {0,} & {\text { otherwise }}\end{array}\right.
+f(x) = \begin{cases}
+    \frac{1}{b-a}, & \text{if }a \leq b \\
+    0, & \text{otherwise}
+\end{cases}
 $$
 
 - **$$X \sim \text{Exponential}(\lambda)$$** (where $$\lambda$$ > 0): decaying probability density over the nonnegative reals.
 
 $$
-f(x)=\left\{\begin{array}{ll}{\lambda e^{-\lambda x},} & {\text { if } x \geq 0} \\ {0,} & {\text { otherwise }}\end{array}\right.
+f(x) = \begin{cases}
+    \lambda e^{-\lambda x}, & \text{if }x \geq 0 \\
+    0, & \text{otherwise}
+\end{cases}
 $$
 
 - **$$X \sim \text{Normal}(\mu, \sigma^2)$$**: also known as the Gaussian distribution

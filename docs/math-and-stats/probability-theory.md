@@ -202,8 +202,9 @@ $$
 - **$$X \sim \text{Bernoulli}(p)$$** (where $$0 \leq p \leq 1$$): the outcome of a coin flip ($$H=1, T=0$$) for a coin that comes up heads with probability p.
 
 $$
-p(x)=\left\{\begin{array}{ll}{p,} & {\text { if } x=1} \\ 
-{1-p,} & {\text { if } x=0}\end{array}\right.
+\begin{equation}
+p(x)=\left\{\begin{array}{ll}{p,} & {\text { if } x=1} \\ {1-p,} & {\text { if } x=0}\end{array}\right.
+\end{equation}
 $$
 
 - **$$X \sim \text{Binomial}(n, p)$$** (where $$0 \leq p \leq 1$$): the number of heads in $$n$$ independent flips of a coin with heads probability $$p$$.

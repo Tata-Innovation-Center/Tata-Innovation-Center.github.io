@@ -141,11 +141,7 @@ Recall that in the original model, $$z$$ is an indicator variable that chooses a
 At the M-step, we optimize the expected log-likelihood of our model.
 
 $$
-\begin{align*}
-\theta_{t+1}
-& = \arg\max_\theta \sum_{x \in D} \E_{z \sim p(z|x; \theta_t)} \log p(x,z; \theta) \\
-& = \arg\max_\theta \sum_{k=1}^K \sum_{x \in D} p(z_k|x; \theta_t) \log p(x|z_k; \theta) + \sum_{k=1}^K \sum_{x \in D} p(z_k|x; \theta_t) \log p(z_k; \theta)
-\end{align*}
+\begin{aligned} \theta_{t+1} &=\arg \max _{\theta} \sum_{x \in D} \mathbb{E}_{z \sim p\left(z | x ; \theta_{t}\right)} \log p(x, z ; \theta) \\ &=\arg \max _{\theta} \sum_{k=1}^{K} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(x | z_{k} ; \theta\right)+\sum_{k=1}^{K} \sum_{x \in D} p\left(z_{k} | x ; \theta_{t}\right) \log p\left(z_{k} ; \theta\right) \end{aligned}
 $$
 
 We can optimize each of these terms separately. We will start with $$p(x\mid z_k; \theta) = \mathcal{N}(x; \mu_k, \Sigma_k)$$. We have to find $$\mu_k, \Sigma_k$$ that maximize

@@ -220,8 +220,8 @@ $$
 
 $$
 p(x) = \begin{cases}
-    p, & \text{if }x = 1 \\
-    1-p, & \text{if }x = 0
+p, & \text{if }x = 1 \\
+1-p, & \text{if }x = 0
 \end{cases}
 $$
 

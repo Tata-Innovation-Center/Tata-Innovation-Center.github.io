@@ -2,9 +2,6 @@
 layout: default
 title: Gallery
 mathjax: true
-parent: Machine Learning
-nav_order: 2
-date: 2019-11-04 12:00:00
 ---
 
 <!DOCTYPE HTML>

@@ -60,7 +60,7 @@ For more info, visit [https://github.com/cagrimmett/jekyll-tools](https://github
 <script type="text/javascript">
 
 var data = {% assign counter = 0 %}{
-{% for post in site.html_pages %}{% capture day %}{{ post.date | date: '%s' }}{% endcapture %}{% capture prevday %}{{ post.previous.date | date: '%s' }}{% endcapture %}{% assign counter = counter | plus: 1 %}{% if day != prevday %}"{{ post.date | date: '%s' }}": {{ counter }}{% assign counter = 0 %}{% if forloop.last == false %},{% endif %}
+{% for post in site.html_pages %}{% capture day %}{{ post.date | date: '%s' }} console.log(post.date); {% endcapture %}{% capture prevday %}{{ post.previous.date | date: '%s' }}{% endcapture %}{% assign counter = counter | plus: 1 %}{% if day != prevday %}"{{ post.date | date: '%s' }}": {{ counter }}{% assign counter = 0 %}{% if forloop.last == false %},{% endif %}
 {% endif %}{% endfor %}};
 
 

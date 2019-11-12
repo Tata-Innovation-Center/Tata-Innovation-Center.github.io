@@ -1,0 +1,208 @@
+{
+  "Canada": [
+    {
+      "height": 701,
+      "compressed_path": "./photos/Canada/WechatIMG33.min.jpeg",
+      "width": 640,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG33.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG33.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG25.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG25.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG25.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG29.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG29.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG29.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG28.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG28.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG28.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG24.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG24.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG24.jpeg"
+    },
+    {
+      "height": 960,
+      "compressed_path": "./photos/Canada/WechatIMG32.min.jpeg",
+      "width": 960,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG32.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG32.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG23.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG23.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG23.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG22.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG22.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG22.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG27.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG27.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG27.jpeg"
+    },
+    {
+      "height": 960,
+      "compressed_path": "./photos/Canada/WechatIMG30.min.jpeg",
+      "width": 690,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG30.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG30.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Canada/WechatIMG26.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Canada/WechatIMG26.placeholder.jpeg",
+      "path": "./photos/Canada/WechatIMG26.jpeg"
+    }
+  ],
+  "Penn": [
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Penn/WechatIMG13.min.jpeg",
+      "width": 1440,
+      "compressed": false,
+      "placeholder_path": "./photos/Penn/WechatIMG13.placeholder.jpeg",
+      "path": "./photos/Penn/WechatIMG13.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/Penn/WechatIMG12.min.jpeg",
+      "width": 1440,
+      "compressed": false,
+      "placeholder_path": "./photos/Penn/WechatIMG12.placeholder.jpeg",
+      "path": "./photos/Penn/WechatIMG12.jpeg"
+    },
+    {
+      "height": 1440,
+      "compressed_path": "./photos/Penn/WechatIMG14.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/Penn/WechatIMG14.placeholder.jpeg",
+      "path": "./photos/Penn/WechatIMG14.jpeg"
+    }
+  ],
+  "NYC": [
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG39.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG39.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG39.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG15.min.jpeg",
+      "width": 1620,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG15.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG15.jpeg"
+    },
+    {
+      "height": 1440,
+      "compressed_path": "./photos/NYC/WechatIMG35.min.jpeg",
+      "width": 948,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG35.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG35.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG8.min.jpeg",
+      "width": 1440,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG8.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG8.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG9.min.jpeg",
+      "width": 1692,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG9.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG9.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG34.min.jpeg",
+      "width": 1440,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG34.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG34.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG40.min.jpeg",
+      "width": 1698,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG40.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG40.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG36.min.jpeg",
+      "width": 1440,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG36.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG36.jpeg"
+    },
+    {
+      "height": 1347,
+      "compressed_path": "./photos/NYC/WechatIMG16.min.jpeg",
+      "width": 1079,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG16.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG16.jpeg"
+    },
+    {
+      "height": 1080,
+      "compressed_path": "./photos/NYC/WechatIMG11.min.jpeg",
+      "width": 1440,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG11.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG11.jpeg"
+    },
+    {
+      "height": 1440,
+      "compressed_path": "./photos/NYC/WechatIMG10.min.jpeg",
+      "width": 1080,
+      "compressed": false,
+      "placeholder_path": "./photos/NYC/WechatIMG10.placeholder.jpeg",
+      "path": "./photos/NYC/WechatIMG10.jpeg"
+    }
+  ]
+}

@@ -22,16 +22,9 @@ Ang Zhou
 
 
 <div id="calendar" style="margin:0 auto;">
-    <div id="cal-heatmap"></div>
-        <div style="padding-top: 10px;">
-                <a
-                  href="#"
-                  style="margin-right:10px;"
-                  id="cal-heatmap-PreviousDomain-selector"
-                  ><i class="fa fa-chevron-left"></i
-                ></a>
-                <a href="#" style="float:right;" id="cal-heatmap-NextDomain-selector"
-                  ><i class="fa fa-chevron-right"></i
-                ></a>
-        </div>
+	<div id="cal-heatmap"></div>
+	<div style="padding-top: 10px;">
+		<a href="#" style="margin-right:10px;" id="cal-heatmap-PreviousDomain-selector"><i class="fa fa-chevron-left"></i></a>
+		<a href="#" style="float:right;" id="cal-heatmap-NextDomain-selector"><i class="fa fa-chevron-right"></i></a>
+	</div>
 </div>

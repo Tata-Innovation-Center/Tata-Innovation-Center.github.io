@@ -50,9 +50,7 @@ $$
 ### Dominated Strategy
 
 we say that $$a_{i} \in A_{i}$$ is strictly dominated by $$a_{i}^{\prime}$$
-for a player i, if for any action profile $$a_{-i} \in A_{-i}$$
-, we have
-
+for a player i, if for any action profile $$a_{-i} \in A_{-i}$$, we have
 
 $$
 u_{i}\left(a_{i}, a_{-i}\right)<u_{i}\left(a_{i}^{\prime}, a_{-i}\right)
@@ -82,3 +80,5 @@ In other words, everybody is playing their best.
 Given an action profile $$\vec{a}$$, let $$BR_{i}(\vec{a})$$ — i’s best-response
 set be the set of strategies $$ a_{i}^{\prime} \in A_{i}$$ that maximize player i’s utility given
 $$a_{−i}$$.
+
+$$\vec{a}$$ is a PNE if and only if $$\vec{a} \in BR(\vec{a})

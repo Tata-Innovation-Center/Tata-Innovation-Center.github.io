@@ -79,3 +79,24 @@ $$
 $$
 
 where $$PNE_{G}$$ denotes the set of PNE in G.
+
+
+### Theorem 4
+In every Networked Coordination Game G, there exists a PNE $$\vec{a}^{\prime}$$
+such that
+
+$$
+S W^{\mathcal{G}}\left(\vec{a}^{\prime}\right) \geq \frac{1}{2} M S W^{\mathcal{G}}
+$$
+
+In other words, the Price of Stability in G is at most 2.
+
+### Theorem 5
+For every $$n \in N$$, $$\epsilon > 0$$, there exists some n-player Networked
+Coordination Game G such that for every PNE $$\vec{a}^{\prime}$$ in G we have that
+
+$$
+S W^{\mathcal{G}}\left(\vec{a}^{\prime}\right) \leq\left(\frac{1}{2}+\epsilon\right) M S W^{\mathcal{G}}
+$$
+
+In other words, the Price of Stability can be arbitrarily close to 2.

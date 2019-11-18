@@ -66,3 +66,17 @@ $$
 in other words, remove strictly dominated strategy for each player.
 3. Continue this procedure until no more strictly dominated strategies can be removed.
 
+### Pure-Strategy Nash Equilibrium (PNE)
+Given a game $$(n, A, u)$$, a Pure-strategy Nash equilibrium (PNE) is a profile of action $$\vec{a} \in A$$ such that for each player i and all actions $$a_{i}^{\prime} \in A_{i}$$
+
+$$
+u_{i}\left(a_{i}, a_{-i}\right) \geq u_{i}\left(a_{i}^{\prime}, a_{-i}\right)
+$$
+
+In other words, everybody is playing their best.
+
+### Best responses 
+
+Given an action profile $$\vec{a}$$, let $$BR_{i}(\vec{a})$$ — i’s best-response
+set be the set of strategies $$ a_{i}^{\prime} \in A_{i}$$ that maximize player i’s utility given
+$$a_{−i}$$.

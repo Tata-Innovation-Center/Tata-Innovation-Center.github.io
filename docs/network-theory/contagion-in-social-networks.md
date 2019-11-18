@@ -38,3 +38,14 @@ $$
 
 ### Theorem 1
 Given a plain networked coordination game G induced by $$G =(V, E)$$, with adoption threshold t, a set S is cascading w.r.t. G if and only if there does not exist a set of nodes $$T \subseteq V \backlash S$$ having density 1 − t 
+
+
+### The Computational Complexity of Finding the Small Cascading Sets
+
+NP-hard
+
+### Strong cascade
+
+The notion of a cascading set assumes that the original set S of “early adopters”
+never changes actions—i.e. they do not participate in the BRD. We can consider an even stronger notion of cascading where the early adopters only need to start off playing X
+

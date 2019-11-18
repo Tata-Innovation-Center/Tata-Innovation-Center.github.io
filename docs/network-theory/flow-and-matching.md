@@ -100,3 +100,13 @@ There exists a polynomial-time algorithm to find the maximum matching in any und
 A matching M in a bipartite graph $$G=(X \cup Y, E)$$ where
 $$|X| = |Y | = n$$ is said to be perfect if all nodes in X get matched in M—that
 is, M is of size n
+
+### Constricted Sets
+Given a bipartite graph $$G=(X \cup Y, E)$$, a constricted set is a subset $$C \subseteq X$$ such that 
+$$|N(C)| < |C|$$. where $$N(S)$$ denote the set of neighboring nodes to any node in S
+
+The notion of a constricted set turns out to be crucial for characterizing the existence of perfect matchings, A constricted set is a set C of nodes that has less neighbors than elements in C
+
+### Theorem 3
+Given a bipartite graph $$G = (X \cup Y, E)$$ with $$|X| = |Y | = n$$,
+a perfect matching exists if and only if no constricted set exists in G. Additionally, whenever such a constricted set exists, it can be found in polynomial time.

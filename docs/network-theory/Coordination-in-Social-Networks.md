@@ -33,3 +33,10 @@ maximize its utility (i.e., to best respond to the actions of the other players)
 1. Choose X if $$pdx > (1 − p)dy$$ 
 2. Choose Y if $$pdx < (1 − p)dy$$
 3. choose either X or Y if $$pdx > (1 − p)dy$$ 
+
+### Social welfare or potential function of a Plain Networked Coordination Games
+
+$$
+\Phi^{\mathcal{G}}(\vec{a})=\mathrm{SW}^{\mathcal{G}}(\vec{a})=\sum_{i \in n} u_{i}(\vec{a}) =\sum_{(i, j) \in E} Q\left(a_{i}, a_{j}\right)
+
+$$

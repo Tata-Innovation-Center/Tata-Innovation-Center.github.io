@@ -46,3 +46,21 @@ capacity 0 are removed).
     - In addition, for each edge $$e = (u, v) \in P$$ where flow was added, add the same amount of capacity that was removed from $$(u, v)$$ to a reverse edge $$(v, u)$$.
 4. Reiterate this process on the new graph $$G^{\prime}$$, and continue until no further augmenting path $$P$$ can be found
 5. The final maximum flow is obtained by summing up the flows picked in each iteration.
+
+### Min-Cut 
+
+An $$(s, t)$$-cut of a weighted graph $$G = (V, E, c)$$ is a partition
+of V into two sets $$(S, T)$$ such that $$s \in S$$ and $$t \in T$$. The capacity of an
+$$(s, t)$$-cut $$(S, T)$$ is the sum of the capacities of all the edges $$e = (u, v) \in E$$
+such that $$u \in S$$ and $$v \in T$$ (i.e. all edges leaving S). An (s, t)-cut (S, T)
+is said to be a min-$$(s, t)$$-cut in G if its capacity is smaller, or equal to, the
+capacity of any other $$(s, t)$$-cut in G
+
+
+### Theorem 1
+
+Given a weighted graph $$G = (V, E, c)$$ and a source-sink pair
+s, t, the Augmenting Path Algorithm outputs some max-$$(s, t)$$-flow in G. Furthermore,
+1. The output flow is always integral;
+2. The algorithm’s running time is polynomial in the size of G and the value of the max-$$(s, t)$$-flow.
+3. The value of the max-$$(s, t)$$-flow in G is equal to the capacity of any min-$$(s, t)$$-cut in G

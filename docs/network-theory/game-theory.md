@@ -82,3 +82,9 @@ set be the set of strategies $$ a_{i}^{\prime} \in A_{i}$$ that maximize player 
 $$a_{−i}$$.
 
 $$\vec{a}$$ is a PNE if and only if $$\vec{a} \in BR(\vec{a})
+
+### Best-response dynamics
+
+A particularly natural approach for trying to find the PNE is to start at
+some arbitrary action profile $$\vec{a}$$, and then to let any player deviate by playing
+a best-response to what everyone else is currently doing.

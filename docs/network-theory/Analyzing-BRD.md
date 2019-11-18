@@ -64,9 +64,22 @@ The above condition change to :
 
 $$a_{i} \notin B R_{i}(\vec{a})$$  but $$ a_{i}^{\prime} \in B R_{i}(\vec{a})$$
 
+we have that
+
+$$
+\Phi\left(a_{i}^{\prime}, a_{-i}\right)>\Phi\left(a_{i}, a_{-i}\right)
+$$
+
 
 ### Theorem 1: 
 BRD converges in G if and only if G has a weakly ordinal
 potential function.
 
 ### Better-Response Dynamics
+
+Better-response dynamics proceeds exactly as best-response dynamics except that players can switch to any profitable deviation (as opposed to just the best one).
+
+
+### Theorem 2:
+Better-response dynamics converges in G if and only if G has
+an ordinal potential function

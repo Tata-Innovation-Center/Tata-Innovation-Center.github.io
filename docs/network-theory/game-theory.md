@@ -81,7 +81,7 @@ Given an action profile $$\vec{a}$$, let $$BR_{i}(\vec{a})$$ — i’s best-resp
 set be the set of strategies $$ a_{i}^{\prime} \in A_{i}$$ that maximize player i’s utility given
 $$a_{−i}$$.
 
-$$\vec{a}$$ is a PNE if and only if $$\vec{a} \in BR(\vec{a})
+Claim : $$\vec{a}$$ is a PNE if and only if $$\vec{a} \in BR(\vec{a})$$
 
 ### Best-response dynamics
 

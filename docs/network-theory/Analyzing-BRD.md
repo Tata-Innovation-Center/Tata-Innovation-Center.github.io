@@ -61,3 +61,8 @@ $$
 \Phi\left(a_{i}^{\prime}, a_{-i}\right)>\Phi\left(a_{i}, a_{-i}\right)
 $$
 
+### Weakly ordinal potential function
+The above condition change to :
+
+$$a_{i} \notin B R_{i}(\vec{a})$$  but $$ a_{i}^{\prime} \in B R_{i}(\vec{a})$$
+

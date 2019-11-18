@@ -35,3 +35,5 @@ any outgoing edges and thus the path ends.
 graph G—that is, a node without any outgoing edges. If a node is a
 sink in G, nobody can improve their utility by best responding.
 
+### Ordinary potential function
+

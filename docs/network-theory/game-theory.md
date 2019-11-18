@@ -53,7 +53,7 @@ we say that $$a_{i} \in A_{i}$$ is strictly dominated by $$a_{i}^{\prime}$$
 for a player i, if for any action profile $$a_{-i} \in A_{-i}$$, we have
 
 $$
-u_{i}\left(a_{i}, a_{-i}\right)<u_{i}\left(a_{i}^{\prime}, a_{-i}\right)
+u_{i}\left(a_{i}, a_{-i}\right) \leq u_{i}\left(a_{i}^{\prime}, a_{-i}\right)
 $$
 
 ### Iterated strict dominance (ISD)

@@ -46,3 +46,13 @@ an action $$a_{i}$$ such that, for all $$a_{i}^{\prime} \in A_{i} \backslash a_{
 $$
 u_{i}\left(a_{i}, a_{-i}\right) \geq u_{i}\left(a_{i}^{\prime}, a_{-i}\right)
 $$
+
+### Dominated Strategy
+
+we say that $$a_{i} \in A_{i}$$ is strictly dominated by $$a_{i}^{\prime}$$
+for a player i, if for any action profile $$a_{-i} \in A_{-i}$$
+, we have
+
+$$
+u_{i}\left(a_{i}, a_{-i}\right)<u_{i}\left(a_{i}^{\prime}, a_{-i}\right)
+$$

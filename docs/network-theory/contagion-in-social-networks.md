@@ -50,3 +50,14 @@ NP-hard
 The notion of a cascading set assumes that the original set S of “early adopters”
 never changes actions—i.e. they do not participate in the BRD. We can consider an even stronger notion of cascading where the early adopters only need to start off playing X
 
+Given a plain networked coordination game G induced by $$G =(V, E)$$, and coordination utility Q, we say that a set $$S \subseteq V$$ is strongly cascading with respect to G if BRD from the outcome
+$$(X_{S}, Y_{−S})$$ always ends with all nodes in V choosing X.
+
+
+### Theorem 2
+Given a plain networked coordination game G induced by $$G =(V, E)$$, Q with adoption threshold t, a set S is strongly cascading w.r.t. G if
+1. S has density t, and
+2. there does not exists a set of nodes $$T \subseteq V \backslash S$$ having density 1−t
+
+
+

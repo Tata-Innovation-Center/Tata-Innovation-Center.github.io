@@ -38,7 +38,23 @@ maximize its utility (i.e., to best respond to the actions of the other players)
 
 $$
 \Phi^{\mathcal{G}}(\vec{a})=\mathrm{SW}^{\mathcal{G}}(\vec{a})=\sum_{i \in n} u_{i}(\vec{a}) =\sum_{(i, j) \in E} Q\left(a_{i}, a_{j}\right)
+$$
 
+### Theorem 1
+
+$$\Phi^{\mathcal{G}}$$ is an ordinal potential function for any plain networked coordination game G.
+
+
+### Theorem 2
+
+BRD converges in every plain networked coordination game.
+
+### Incorporating Intrinsic Values
+
+Now we can consider case where each player's action has its own intrinsic value and the utility now is:
+
+$$
+u_{i}(\vec{a})=R_{i}\left(a_{i}\right)+\sum_{j \in N(i)} Q\left(a_{i}, a_{j}\right)
 $$
 
 

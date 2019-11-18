@@ -3,8 +3,7 @@ layout: default
 title: Analyzing Best-Response Dynamics
 nav_order: 5
 mathjax: true
-has_children: true
-permalink: /docs/network-theory
+parent: Network Theory
 date: 2019-11-17 12:00:00
 ---
 
@@ -65,3 +64,9 @@ The above condition change to :
 
 $$a_{i} \notin B R_{i}(\vec{a})$$  but $$ a_{i}^{\prime} \in B R_{i}(\vec{a})$$
 
+
+### Theorem 1: 
+BRD converges in G if and only if G has a weakly ordinal
+potential function.
+
+### Better-Response Dynamics

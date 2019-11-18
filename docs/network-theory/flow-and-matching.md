@@ -82,3 +82,12 @@ A bipartite graph is simply a graph where the nodes are divided into two typesâ€
 
 A bipartite graph is a graph $$G = (V, E)$$ where $$V=X \cup Y$$
 and $$(x, y) \in E$$ only if $$x \in X$$ and $$y \in Y$$ .
+
+
+### Matching
+
+A matching in an undirected graph $$(V, E)$$ is a set of edges
+$$M \subset E$$ such that every node $$v /in V$$ has at most degree 1 with respect to M
+(i.e. at most 1 edge in M connected to it). We define the size of the matching
+as $$|M|$$. We say M is a maximum matching if its size is at least as large as
+the size of any other matching $$M_{\prime}$$ in G

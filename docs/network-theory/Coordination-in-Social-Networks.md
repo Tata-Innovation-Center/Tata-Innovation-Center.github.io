@@ -30,7 +30,7 @@ remaining fraction $$(1 − p)$$ of whom choose Y . Then v’s utility for choos
 is $$pdx$$ and its utility for choosing Y is $$(1−p)dy$$. What action should v take to
 maximize its utility (i.e., to best respond to the actions of the other players)?
 
-1. Choose X if $$pdx > (1 − p)dy$$ 
+1. Choose X if $$pdx > (1 − p)dy$$.
 2. Choose Y if $$pdx < (1 − p)dy$$.
 3. choose either X or Y if $$pdx = (1 − p)dy$$ 
 

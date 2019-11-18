@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Analyzing Best-Response
-Dynamics
-nav_order: 3
+title: Analyzing Best-Response Dynamics
+nav_order: 5
 mathjax: true
 has_children: true
 permalink: /docs/network-theory

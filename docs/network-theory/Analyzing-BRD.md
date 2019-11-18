@@ -35,5 +35,29 @@ any outgoing edges and thus the path ends.
 graph G—that is, a node without any outgoing edges. If a node is a
 sink in G, nobody can improve their utility by best responding.
 
-### Ordinary potential function
+### Potential function
+we define a potential (or “energy”) function $$\Phi: A \rightarrow \mathbb{Z}$$, which maps outcome profiles to integers(denoting the “energy level”). A particularly natural potential function (which
+we will use later) is the utilitarian social welfare, or simply social welfare
+(SW), defined as the sum of all players’ utilities:
+
+$$
+\Phi(a)=\mathrm{SW}(a)=\sum_{i \in n} u_{i}(a)
+$$
+
+
+### Ordinal potential function
+Roughly speaking, a potential function is said to be ordinal if any profitable single-player
+deviation increases the potential. 
+$$\Phi: A \rightarrow \mathbb{Z}$$ for a game $$G = (n, A, u)$$ if, for every action profile
+$$a \in A$$, every player i, and every action $$a_{i}^{\prime} \in A_{i}$$, if
+
+$$
+u_{i}\left(a_{i}^{\prime}, a_{-i}\right)>u_{i}\left(a_{i}, a_{-i}\right)
+$$
+
+then
+
+$$
+\Phi\left(a_{i}^{\prime}, a_{-i}\right)>\Phi\left(a_{i}, a_{-i}\right)
+$$
 

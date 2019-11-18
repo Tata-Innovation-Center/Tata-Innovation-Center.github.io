@@ -57,4 +57,25 @@ $$
 u_{i}(\vec{a})=R_{i}\left(a_{i}\right)+\sum_{j \in N(i)} Q\left(a_{i}, a_{j}\right)
 $$
 
+where  $$R_{i}(a_{i})$$ denotes the intrinsic value of $$a_{i}$$ to player i
 
+### Theorem 3
+
+BRD converges in every Networked Coordination Game
+
+### Price of Stability
+
+How bad can the “gap” between the social welfare in the best equilibrium and in the sociallyoptimal outcome be? We denote the maximum social welfare (MSW) by 
+
+$$
+M S W^{\mathcal{G}}=\max _{\vec{a} \in A} S W^{\mathcal{G}}(\vec{a})
+$$
+
+The Price of Stability in a game G with non-negative
+utilities is defined as
+
+$$
+\frac{M S W^{\mathcal{G}}}{\max _{\vec{a} \in P N E^{\mathcal{G}}} S W^{\mathcal{G}(\vec{a})}}
+$$
+
+where $$PNE_{G}$$ denotes the set of PNE in G.

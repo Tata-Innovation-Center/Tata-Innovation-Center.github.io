@@ -64,3 +64,21 @@ s, t, the Augmenting Path Algorithm outputs some max-$$(s, t)$$-flow in G. Furth
 1. The output flow is always integral;
 2. The algorithm’s running time is polynomial in the size of G and the value of the max-$$(s, t)$$-flow.
 3. The value of the max-$$(s, t)$$-flow in G is equal to the capacity of any min-$$(s, t)$$-cut in G
+
+### Edge-Disjoint Paths
+
+We say that two paths from s to t are edge-disjoint if they do not have any edges in
+common. 
+
+In any graph G, the number of edge-disjoint paths between a
+source s and a sink t equals the max-$$(s, t)$$-flow in $$(G, c)$$ where $$c(e) = 1$$ for all
+edges e. Additionally, there exists a algorithm that finds them whose running
+time is polynomial in the number of such paths.
+
+
+### Bipartite Graphs and Maximum Matchings
+
+A bipartite graph is simply a graph where the nodes are divided into two types—“left nodes” X and “right nodes” Y and edges can only exist between a node of one type and a node of the other type. Formal definition:
+
+A bipartite graph is a graph $$G = (V, E)$$ where $$V=X \cup Y$$
+and $$(x, y) \in E$$ only if $$x \in X$$ and $$y \in Y$$ .

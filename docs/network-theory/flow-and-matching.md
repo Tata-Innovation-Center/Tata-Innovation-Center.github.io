@@ -91,3 +91,12 @@ $$M \subset E$$ such that every node $$v /in V$$ has at most degree 1 with respe
 (i.e. at most 1 edge in M connected to it). We define the size of the matching
 as $$|M|$$. We say M is a maximum matching if its size is at least as large as
 the size of any other matching $$M_{\prime}$$ in G
+
+
+### Theorem 2
+There exists a polynomial-time algorithm to find the maximum matching in any undirected bipartite graph G.
+
+### Perfect Matchings 
+A matching M in a bipartite graph $$G=(X \cup Y, E)$$ where
+$$|X| = |Y | = n$$ is said to be perfect if all nodes in X get matched in M—that
+is, M is of size n

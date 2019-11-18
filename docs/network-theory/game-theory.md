@@ -59,4 +59,10 @@ $$
 
 ### Iterated strict dominance (ISD)
 1. For each player i, let $$A^{0}_{i} = A_{i}$$
+2. Next, we proceed in rounds: For each round j, for each player i, let $$A^{j}_{i}$$ denote the set of strategies that are not strictly dominated if we restrict the action space to 
+$$
+A^{j-1}=A_{1}^{j-1} \times \ldots \times A_{n}^{j-1}
+$$
+in other words, remove strictly dominated strategy for each player.
+3. Continue this procedure until no more strictly dominated strategies can be removed.
 

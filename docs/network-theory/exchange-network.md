@@ -1,0 +1,24 @@
+---
+layout: default
+title: Exchange Network
+nav_order: 10
+mathjax: true
+parent: Network Theory
+date: 2019-11-24 12:00:00
+---
+
+# Exchange Network
+
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+--- 
+
+### Definition of a Matching Market
+Given a set of players (buyers) $$X=[n]=\{1, \ldots, n\}$$ and a set of n items Y :
+1. we associate with each player (buyer) $$i \in X$$, a valuation function $$v_{i}:Y \rightarrow N$$. For each $$y \in Y$$ , $$v_{i}(y) determines i’s value for item y

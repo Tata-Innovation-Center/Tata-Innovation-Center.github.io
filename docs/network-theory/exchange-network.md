@@ -45,3 +45,13 @@ $$(M, a)$$ is a stable outcome in $$(G, v)$$ where:
 1. $$a(y) = p(y)$$ if $$y \in Y$$
 2. $$a(i) = v_{i}(M(i)) − p(M(i))$$ if $$i \in [n]$$ and $$M(i) \neq \perp$$
 3. $$a(i) = 0$$ otherwise
+
+
+### Theorem 1
+Any exchange network $$(G, v)$$ where $$G$$ is bipartite has a stable
+outcome. Furthermore, such a stable outcome can be found in time polynomial
+in the size of $$G$$ and the maximum value of any edge in the graph.
+
+### Claim 2
+There exists an exchange network with three nodes for which no
+stable outcome can exist.

@@ -56,6 +56,8 @@ prices they need to pay for them.
 
 And the social welfare can be written as:
 $$
-\begin{aligned} SW^{T}(\alpha, p)=\text { buyers' utilities }+\text { sellers' utilities } \\=\sum_{i \in[n], \alpha(i) \neq \perp} u_{i}(\alpha(i))+\sum_{i \in[n], \alpha(i) \neq \perp} p(\alpha(i)) \\=\sum_{i \in[n], \alpha(i) \neq \perp}\left(v_{i}(\alpha(i))-p(\alpha(i))\right)+\sum_{i \in[n], \alpha(i) \neq \perp} p(\alpha(i))  \\= \sum_{i \in[n], \alpha(i) \neq \perp} v_{i}(\alpha(i))=S V^{\Gamma}(\alpha)
-\end{aligned}
+SW^{T}(\alpha, p)=\text { buyers' utilities }+\text { sellers' utilities }
 $$
+
+### claim 1
+For all $$\alpha$$, p, $$SW^{T}$$(\alpha, p) = SV^{T}(\alpha)$$.

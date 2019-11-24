@@ -47,3 +47,7 @@ the highest value
 
 We can similarly define a second-price auction, where the winner is still the
 highest bidder, but they instead need only pay the second-highest bid
+
+$$
+p_{i^{*}}=\max _{j \in[n] \backslash i^{*}} r_{j}
+$$

@@ -35,4 +35,13 @@ unstable if there exists a pair of nodes x, y in G such that $$(x, y) \notin M$$
 $$a(x) + a(y) < v(x, y)$$  (i.e., the edge has a positive surplus). If $$(M, a)$$ is not
 unstable, we call it stable.
 
-### correspondence between matching markets and exchange networks:
+### Claim 1
+Let $$T = (n, Y, v)$$ be a matching market and let $$(G, v)$$ be the
+exchange network corresponding to $$T$$. Or, conversely, let $$(G, v)$$ be an exchange
+network where $$G = ([n ∪ Y ], E)$$ is bipartite, and let $$T$$ be the matching market
+corresponding to it. Then $$(p, M)$$ is a market equilibrium in $$T$$ if and only if
+$$(M, a)$$ is a stable outcome in $$(G, v)$$ where:
+
+1. $$a(y) = p(y)$$ if $$y \in Y$$
+2. $$a(i) = v_{i}(M(i)) − p(M(i))$$ if $$i \in [n]$$ and $$M(i) \neq \perp$$
+3. $$a(i) = 0$$ otherwise

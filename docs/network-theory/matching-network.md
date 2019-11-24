@@ -60,7 +60,7 @@ SW^{T}(\alpha, p)=\text { buyers' utilities }+\text { sellers' utilities }
 $$
 
 ### claim 1
-For all $$\alpha$$, p, $$SW^{T}$$(\alpha, p) = SV^{T}(\alpha)$$.
+For all $$\alpha$$, p, $$SW^{T}(\alpha, p) = SV^{T}(\alpha)$$.
 
 We say that an assignment α maximizes social value if $$SV^{T}(\alpha) = \max _{\alpha^{\prime}} SV^{T}(\alpha^{\prime})$$ Similarly, an assignment α and and price function p maximize social welfare if $$SW^{T}(\alpha) = \max _{\alpha^{\prime},p^{\prime}} SV^{T}(\alpha^{\prime}, p^{\prime})$$
 

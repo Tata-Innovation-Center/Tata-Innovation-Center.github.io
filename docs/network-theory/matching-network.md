@@ -49,3 +49,13 @@ $$T$$ as
 $$
 S V^{\Gamma}(\alpha)=\sum_{i \in[n], \alpha(i) \neq \perp} v_{i}(\alpha(i))
 $$
+
+Note the social value is different from sum of buyer’s utilities, as it considers
+only the value the buyers get from the items,  but without considering the
+prices they need to pay for them. 
+
+And the social welfare can be written as:
+$$
+\begin{aligned} SW^{T}(\alpha, p)=\text { buyers' utilities }+\text { sellers' utilities } \\=\sum_{i \in[n], \alpha(i) \neq \perp} u_{i}(\alpha(i))+\sum_{i \in[n], \alpha(i) \neq \perp} p(\alpha(i)) \\=\sum_{i \in[n], \alpha(i) \neq \perp}\left(v_{i}(\alpha(i))-p(\alpha(i))\right)+\sum_{i \in[n], \alpha(i) \neq \perp} p(\alpha(i))  \\= \sum_{i \in[n], \alpha(i) \neq \perp} v_{i}(\alpha(i))=S V^{\Gamma}(\alpha)
+\end{aligned}
+$$

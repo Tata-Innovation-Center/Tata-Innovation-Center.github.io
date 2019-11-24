@@ -78,3 +78,8 @@ welfare will be maximized regardless of how we set prices.
 market $$T$$ and a market equilibrium $$(p, M)$$ for $$T$$, we have that $$\alpha m$$ (i.e., the
 assignment corresponding to the matching M) maximizes social value.
 
+### Theorem 2
+A market equilibrium $$(p, M)$$ exists in every matching market
+$$T$$. Additionally, there exists an efficient procedure which finds this equilibrium
+in time polynomial in the maximum valuation $$V$$ that any buyer has for some
+item

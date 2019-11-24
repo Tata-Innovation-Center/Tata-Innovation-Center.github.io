@@ -61,3 +61,19 @@ $$
 
 ### claim 1
 For all $$\alpha$$, p, $$SW^{T}$$(\alpha, p) = SV^{T}(\alpha)$$.
+We say that an assignment α maximizes social value if $$SV^{T}(\alpha) = \max _{\alpha^{\prime}} SV^{T}(\alpha^{\prime})$$ Similarly, an assignment α and and price function p maximize social welfare if $$SW^{T}(\alpha) = \max _{\alpha^{\prime},p^{\prime}} SV^{T}(\alpha^{\prime}, p^{\prime})$$
+
+### Corollary 2
+For any matching market $$T = (n, Y, v)$$, an assignment $$\alpha$$
+maximizes social value if and only if $$(\alpha, p)$$ maximize social welfare for any
+(or every) p.
+
+Thus, if we have an outcome that maximizes social value, then social
+welfare will be maximized regardless of how we set prices.
+
+
+### Theorem 1
+(Social optimality of market equilibria.). Given a matching
+market $$T$$ and a market equilibrium $$(p, M)$$ for $$T$$, we have that $$\alpha m$$ (i.e., the
+assignment corresponding to the matching M) maximizes social value.
+

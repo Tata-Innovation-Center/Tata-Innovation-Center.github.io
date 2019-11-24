@@ -29,3 +29,8 @@ common endpoint.)
 (u, v) \in M$$, $$a(u) + a(v) = v(e)$$, and for every node v not part of an edge
 in M, $$a(v) = 0$$.
 
+### Stable Outcomes
+Given an exchange network $$(G, v)$$, we call an outcome $$(M, a)$$
+unstable if there exists a pair of nodes x, y in G such that $$(x, y) \notin M$$, but
+$$a(x) + a(y) < v(x, y)$$  (i.e., the edge has a positive surplus). If $$(M, a)$$ is not
+unstable, we call it stable.

@@ -83,3 +83,6 @@ A market equilibrium $$(p, M)$$ exists in every matching market
 $$T$$. Additionally, there exists an efficient procedure which finds this equilibrium
 in time polynomial in the maximum valuation $$V$$ that any buyer has for some
 item
+
+### Bundles of Identical Goods
+In writing

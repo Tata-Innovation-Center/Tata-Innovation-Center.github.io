@@ -18,13 +18,14 @@ date: 2019-11-24 12:00:00
 {:toc}
 
 --- 
+ 
+### Definition of an Exchange Networks
+An exchange network is a pair $$(G, v)$$, where $$G = (V, E)$$
+is a graph and $$v : E \rightarrow N$$ is a function. An outcome of an exchange network
+$$(G, v)$$ is a pair $$(M, a)$$ where:
+1. M is a matching in G (i.e. a subset of E where no two edges share a
+common endpoint.)
+2. $$a : V \rightarrow N$ is an allocation of values to nodes such that for every $e =
+(u, v) \in M$$, $$a(u) + a(v) = v(e)$$, and for every node v not part of an edge
+in M, $$a(v) = 0$$.
 
-### Definition of a Matching Market
-Given a set of players (buyers) $$X=[n]=\{1, \ldots, n\}$$ and a set of n items Y :
-1. we associate with each player (buyer) $$i \in X$$, a valuation function $$v_{i}:Y \rightarrow N$$. For each $$y \in Y$$ , $$v_{i}(y) determines i’s value for item y
-2. we associate with each item $$y \in Y$$ , a price $$p(y) \in N$$
-3. a buyer i who receives an item y gets utility
-$$
-v_{i}(y)-p(y)
-$$
-We would assume sellers get no utility.

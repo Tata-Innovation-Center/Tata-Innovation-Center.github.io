@@ -28,3 +28,24 @@ $$
 v_{i}(y)-p(y)
 $$
 We would assume sellers get no utility.
+
+### Another definition
+We refer to the tuple $$T = (n, Y, v)$$ (as defined above) as a
+matching market, and the tuple $$(T, p) = (n, Y, v, p)$$ as a priced matching
+market.
+
+### Induced acceptability graph 
+Writting
+
+### Induced preferred choice graph
+Writting
+
+### Market-clearing
+Writting
+
+### Social Optimality of Market Clearing
+We can define the social value of an assignment in a matching market
+$$T$$ as
+$$
+S V^{\Gamma}(\alpha)=\sum_{i \in[n], \alpha(i) \neq \perp} v_{i}(\alpha(i))
+$$

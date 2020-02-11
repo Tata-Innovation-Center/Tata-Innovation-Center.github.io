@@ -51,3 +51,16 @@ highest bidder, but they instead need only pay the second-highest bid
 $$
 p_{i^{*}}=\max _{j \in[n] \backslash i^{*}} r_{j}
 $$
+
+### Goals of Mechanism Design
+
+Writing
+
+### DST and NT
+
+Writting
+
+### Claim 1
+A mechanism M is DST if and only if it is NT.
+
+### The VCG Mechanism

@@ -55,3 +55,4 @@ in the size of $$G$$ and the maximum value of any edge in the graph.
 ### Claim 2
 There exists an exchange network with three nodes for which no
 stable outcome can exist.
+

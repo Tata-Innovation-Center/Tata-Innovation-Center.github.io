@@ -36,6 +36,7 @@ p_{X}(x)=p_{Z}(h(x))\left|h^{\prime}(x)\right|
 $$
 
 For the 1d example, we have 
+
 $$
 p_{X}(4)=p_{Z}(1) h^{\prime}(4)=1 / 2 \times 1 / 4=1 / 8
 $$
@@ -53,13 +54,17 @@ Geometrically, the matrix A maps the unit hypercube $$[0, 1]^n$$ to a parallelot
 The volume of the parallelotope is equal to the determinant of the
 transformation $$A$$
 
+
 $$
 \operatorname{det}(A)=\operatorname{det}\left(\begin{array}{cc}{a} & {c} \\ {b} & {d}\end{array}\right)=a d-b c
 $$
 
 $$X$$ is uniformly distributed over the parallelotope. Hence, we have
 
+
 $$
 \begin{aligned} p_{X}(\mathbf{x}) &=p_{Z}\left(W_{\mathbf{X}}\right)|\operatorname{det}(W)| \\ &=p_{Z}(W \mathbf{x}) /|\operatorname{det}(A)| \end{aligned}
 $$
+
+
 

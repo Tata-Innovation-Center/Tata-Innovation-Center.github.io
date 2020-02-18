@@ -27,3 +27,16 @@ If $$X= 4Z$$ and $$z \sim \mathcal{U}[0,2]$$, what is $$p_{x}(4)$$?
 
 X is uniform in [0, 8], so $$p_{X}(4) = 1/8$$.
 
+We have the following formula when we apply a transform function over random variables,
+
+If $$X = f (Z)$$, $$f(\cdot)$$ is monotone with inverse, $$Z=f^{-1}(X)=h(X)$$,  then:
+
+$$
+p_{X}(x)=p_{Z}(h(x))\left|h^{\prime}(x)\right|
+$$
+
+For the 1d example, we have 
+$$
+p_{X}(4)=p_{Z}(1) h^{\prime}(4)=1 / 2 \times 1 / 4=1 / 8
+$$
+

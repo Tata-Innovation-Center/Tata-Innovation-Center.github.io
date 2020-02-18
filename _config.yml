@@ -64,6 +64,9 @@ compress_html:
 # Build settings
 markdown: kramdown
 
+compress_html:
+  blanklines: true
+
 layout_style: ROWS
 
 # Variables below are default. Feel free to customize the values below, but do

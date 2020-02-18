@@ -42,3 +42,6 @@ $$
 
 ### Geometry: Determinants and volumes(2D case)
 
+Let $$Z$$ be a uniform random vector in $$[0, 1]^n$$ and $$X = AZ$$ for a square invertible matrix $$A$$, with inverse $$W = A^{-1}$$.
+
+

@@ -44,4 +44,9 @@ $$
 
 Let $$Z$$ be a uniform random vector in $$[0, 1]^n$$ and $$X = AZ$$ for a square invertible matrix $$A$$, with inverse $$W = A^{-1}$$.
 
+Geometrically, the matrix A maps the unit hypercube $$[0, 1]^n$$ to a parallelotope
+
+<div class="imgcap">
+<img src="https://user-images.githubusercontent.com/22668421/74756128-19a84a00-5242-11ea-92c2-74907e050f7c.png" style="border:none;width:100%">
+</div>
 

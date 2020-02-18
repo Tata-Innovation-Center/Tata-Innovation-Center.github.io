@@ -50,3 +50,16 @@ Geometrically, the matrix A maps the unit hypercube $$[0, 1]^n$$ to a parallelot
 <img src="https://user-images.githubusercontent.com/22668421/74756128-19a84a00-5242-11ea-92c2-74907e050f7c.png" style="border:none;width:100%">
 </div>
 
+The volume of the parallelotope is equal to the determinant of the
+transformation $$A$$
+
+$$
+\operatorname{det}(A)=\operatorname{det}\left(\begin{array}{cc}{a} & {c} \\ {b} & {d}\end{array}\right)=a d-b c
+$$
+
+$$X$$ is uniformly distributed over the parallelotope. Hence, we have
+
+$$
+\begin{aligned} p_{X}(\mathbf{x}) &=p_{Z}\left(W_{\mathbf{X}}\right)|\operatorname{det}(W)| \\ &=p_{Z}(W \mathbf{x}) /|\operatorname{det}(A)| \end{aligned}
+$$
+

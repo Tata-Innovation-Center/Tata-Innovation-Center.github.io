@@ -59,7 +59,8 @@ $$
 \operatorname{det}(A)=\operatorname{det}\left(\begin{array}{cc}{a} & {c} \\ {b} & {d}\end{array}\right)=a d-b c
 $$
 
-$$X$$ is uniformly distributed over the parallelotope. Hence, we have
+
+and $$X$$ is uniformly distributed over the parallelotope. Hence, we have
 
 
 $$

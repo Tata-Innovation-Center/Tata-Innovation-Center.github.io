@@ -58,14 +58,13 @@ compress_html:
   comments: all
   endings: all
   startings: []
-  blanklines: false
+  blanklines: true
   profile: false
 
 # Build settings
 markdown: kramdown
 
-compress_html:
-  blanklines: true
+
 
 layout_style: ROWS
 

@@ -2,7 +2,7 @@
 layout: default
 title: Game Theory
 mathjax: true
-parent: Network Theory
+parent: Network Crowd and Market
 nav_order: 2
 date: 2019-11-17 12:00:00
 ---

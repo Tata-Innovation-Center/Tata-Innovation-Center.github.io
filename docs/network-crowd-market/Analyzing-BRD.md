@@ -3,7 +3,7 @@ layout: default
 title: Analyzing Best-Response Dynamics
 nav_order: 5
 mathjax: true
-parent: Network Theory
+parent: Network Crowd and Market
 date: 2019-11-17 12:00:00
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: Coordination in Social Networks
 nav_order: 6
 mathjax: true
-parent: Network Theory
+parent: Network Crowd and Market
 date: 2019-11-18 12:00:00
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: Exchange Network
 nav_order: 10
 mathjax: true
-parent: Network Theory
+parent: Network Crowd and Market
 date: 2019-11-24 12:00:00
 ---
 

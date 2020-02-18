@@ -40,3 +40,5 @@ $$
 p_{X}(4)=p_{Z}(1) h^{\prime}(4)=1 / 2 \times 1 / 4=1 / 8
 $$
 
+### Geometry: Determinants and volumes(2D case)
+

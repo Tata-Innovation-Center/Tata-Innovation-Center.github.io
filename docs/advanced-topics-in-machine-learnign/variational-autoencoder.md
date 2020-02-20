@@ -79,6 +79,14 @@ $$
 
 ### Representation: Variational autoencoder
 
+Maximum likelihood learning for the above model:
+
+$$
+\log \prod_{\mathbf{x} \in \mathcal{D}} p(\mathbf{x} ; \theta)=\sum_{\mathbf{x} \in \mathcal{D}} \log p(\mathbf{x} ; \theta)=\sum_{\mathbf{x} \in \mathcal{D}} \log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)
+$$
+
+Evaluating $$log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)$$ can be hard!
+
 ### Learning: Variational inference
 
 ## Learning deep latent variable generative models

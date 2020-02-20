@@ -144,7 +144,7 @@ Now we came back to the unanswered question: what is a good choice of q(z)
 Solution: Variational Inference: Optimize over the possible q’s to make
 bound as tight as possible.
 
-If $$q(\mathbf{z})=p(\mathbf{z} | \mathbf{x} ; \theta)$$ the bound becomes:
+If $$q(\mathbf{z})=p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ the bound becomes:
 
 $$
 \begin{aligned} \sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log \frac{p(\mathbf{x}, \mathbf{z} ; \theta)}{p(\mathbf{z} | \mathbf{x} ; \theta)} &=\sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log \frac{p(\mathbf{z} | \mathbf{x} ; \theta) p(\mathbf{x} ; \theta)}{p(\mathbf{z} | \mathbf{x} ; \theta)} \\ &=\sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log p(\mathbf{x} ; \theta) \\ &=\log p(\mathbf{x} ; \theta) \sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \\ &=\log p(\mathbf{x} ; \theta) \end{aligned}

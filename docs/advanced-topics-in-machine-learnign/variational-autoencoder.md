@@ -141,6 +141,7 @@ $$
 
 This is also called Evidence Lower Bound (ELBO).
 
+### variational inference
 
 Now we came back to the unanswered question: what is a good choice of q(z)
 
@@ -158,4 +159,14 @@ However, In practice, the posterior $$p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ i
 Suppose q(z) is any probability distribution over the hidden variables.
 A little bit of algebra reveals
 
+$$
+D_{K L}(q(\mathbf{z}) \| p(\mathbf{z} | \mathbf{x} ; \theta))=-\sum_{\mathbf{z}} q(\mathbf{z}) \log p(\mathbf{z}, \mathbf{x} ; \theta)+\log p(\mathbf{x} ; \theta)-H(q) \geq 0
+$$
+
+Rearranging, we re-derived the Evidence lower bound (ELBO)
+$$
+\log p(\mathbf{x} ; \theta) \geq 
+\sum_{z} q(z) \log p_{\theta}(\mathbf{x}, z)-\underbrace{\sum_{z} q(z) \log q(z)}_{\text {Entropy } H(q) \text { of } q}
+ = \sum_{\mathbf{z}} q(\mathbf{z}) \log p(\mathbf{z}, \mathbf{x} ; \theta)+H(q)
+$$
 ## Learning deep latent variable generative models

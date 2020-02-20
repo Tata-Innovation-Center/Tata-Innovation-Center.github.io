@@ -76,7 +76,6 @@ $$
 $$
 3. Even though $$p(\mathbf{x} \mid \mathbf{z})$$ is simple the marginal distributio of x is very complex/flexible
 
-### Representation: Variational autoencoder
 
 Maximum likelihood learning for the above model:
 
@@ -108,8 +107,49 @@ $$
 p_{\theta}(\mathbf{x}) \approx \frac{1}{k} \sum_{j=1}^{k} \frac{p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)}{q\left(\mathbf{z}^{(j)}\right)}
 $$
 
-A new question now: what is a good choice of q(z)
+A new question now: what is a good choice of q(z)? how to derive algorithms for choosing q and extending this approximation to the marginal log-likelihood.
 
-### Learning: Variational inference
+We can approximate marginal probabilities with importance sampling: 
+
+$$
+p_{\theta}(\mathbf{x}) \approx \frac{1}{k} \sum_{j=1}^{k} \frac{p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)}{q\left(\mathbf{z}^{(j)}\right)}
+$$
+
+However, what we want to approximate is the marginal log-likelihood:
+$$
+\log \left(\sum_{z \in \mathcal{Z}} p_{\theta}(\mathbf{x}, \mathbf{z})\right)=\log \left(\sum_{z \in \mathcal{Z}} \frac{q(\mathbf{z})}{q(\mathbf{z})} p_{\theta}(\mathbf{x}, \mathbf{z})\right)=\log \left(\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right]\right)
+$$
+
+It’s clear that
+
+$$
+\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\log \left(\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right)\right] \neq \log \left(\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right]\right)
+$$
+
+Idea: we can use Jensen Inequality:
+$$
+\log \left(\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}[f(\mathbf{z})]\right)=\log \left(\sum_{\mathbf{z}} q(\mathbf{z}) f(\mathbf{z})\right) \geq \sum_{\mathbf{z}} q(\mathbf{z}) \log f(\mathbf{z})
+$$
+
+Thus 
+$$
+\log \left(\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right]\right) \geq \mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\log \left(\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right)\right]
+$$
+
+This is also called Evidence Lower Bound (ELBO).
+
+
+Now we came back to the unanswered question: what is a good choice of q(z)
+
+Solution: Variational Inference: Optimize over the possible q’s to make
+bound as tight as possible.
+
+If $$q(\mathbf{z})=p(\mathbf{z} | \mathbf{x} ; \theta)$$ the bound becomes:
+
+$$
+\begin{aligned} \sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log \frac{p(\mathbf{x}, \mathbf{z} ; \theta)}{p(\mathbf{z} | \mathbf{x} ; \theta)} &=\sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log \frac{p(\mathbf{z} | \mathbf{x} ; \theta) p(\mathbf{x} ; \theta)}{p(\mathbf{z} | \mathbf{x} ; \theta)} \\ &=\sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log p(\mathbf{x} ; \theta) \\ &=\log p(\mathbf{x} ; \theta) \sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \\ &=\log p(\mathbf{x} ; \theta) \end{aligned}
+$$
+
+However, In practice, the posterior $$p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ is intractable to compute.
 
 ## Learning deep latent variable generative models

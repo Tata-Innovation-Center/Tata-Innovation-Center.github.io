@@ -3,7 +3,7 @@ layout: default
 title: Normalizing Flow Models
 mathjax: true
 parent: Advanced topics in machine learning
-nav_order: 4
+nav_order: 5
 date: 2020-02-18 12:00:00
 ---
 

@@ -87,6 +87,8 @@ $$
 Evaluating $$log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)$$ can be hard because the space for latent variable z is huge.
 
 Solution: Approximations.
+
+**First attempt**: Naive Monte Carlo
 1. Sample $$z^{(1)}, \cdots, z^{(k)}$$ uniformly at random
 2. Approximate expectation with sample average
 
@@ -94,8 +96,19 @@ $$
 \sum_{\mathbf{z}} p_{\theta}(\mathbf{x}, \mathbf{z}) \approx|\mathcal{Z}| \frac{1}{k} \sum_{j=1}^{k} p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)
 $$
 
-First attempt: Naive Monte Carlo
+Works in theory but not in practice.  uniform random sampling is not a good choice.
 
+**Second attempt**: Importance Sampling
+$$
+p_{\theta}(\mathbf{x})=\sum_{\text {All possible values of } \mathbf{z}} p_{\theta}(\mathbf{x}, \mathbf{z})=\sum_{\mathbf{z} \in \mathcal{Z}} \frac{q(\mathbf{z})}{q(\mathbf{z})} p_{\theta}(\mathbf{x}, \mathbf{z})=\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right]
+$$
+1. 1 Sample $$\mathbf{z}^{(1)}, \cdots, \mathbf{z}^{(k)}$$ from q(z)
+2. Approximate expectation with sample average
+$$
+p_{\theta}(\mathbf{x}) \approx \frac{1}{k} \sum_{j=1}^{k} \frac{p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)}{q\left(\mathbf{z}^{(j)}\right)}
+$$
+
+A new question now: what is a good choice of q(z)
 
 ### Learning: Variational inference
 

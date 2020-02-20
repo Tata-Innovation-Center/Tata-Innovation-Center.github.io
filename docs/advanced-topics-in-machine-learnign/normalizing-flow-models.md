@@ -19,6 +19,10 @@ date: 2020-02-18 12:00:00
 ---
 
 ## Intuitions
+Variational autoencoders $$p_{\theta}(\mathbf{x})=\int p_{\theta}(\mathbf{x}, \mathbf{z}) d \mathbf{z}
+$$ can learn feature representations (via latent variables z) but have intractable marginal likelihoods, Can we design a latent variable model with tractable likelihoods? 
+The key idea is to map simple distributions over latent variables (easy to sample and evaluate
+densities) to complex distributions (learned via data) using **change of variables** such that we have analytic density (tractable likelihoods) and easy to sample (sample the latent variable).
 
 ## Change of Variables fomula
 

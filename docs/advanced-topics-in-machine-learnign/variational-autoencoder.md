@@ -77,7 +77,7 @@ $$
 
 
 
-3. Even though $$p(\mathbf{x}|\mathbf{z})$$ is simple the marginal distributio of x is very complex/flexible
+3. Even though $$p(\mathbf{x} \mid \mathbf{z})$$ is simple the marginal distributio of x is very complex/flexible
 
 ### Representation: Variational autoencoder
 

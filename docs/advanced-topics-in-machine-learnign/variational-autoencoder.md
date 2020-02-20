@@ -74,6 +74,7 @@ $$
 $$
 \theta=(A, B, c, d)
 $$
+
 3. Even though $$p(\mathbf{x} \mid \mathbf{z})$$ is simple the marginal distributio of x is very complex/flexible
 
 

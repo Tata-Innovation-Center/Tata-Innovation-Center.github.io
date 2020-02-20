@@ -85,7 +85,7 @@ $$
 \log \prod_{\mathbf{x} \in \mathcal{D}} p(\mathbf{x} ; \theta)=\sum_{\mathbf{x} \in \mathcal{D}} \log p(\mathbf{x} ; \theta)=\sum_{\mathbf{x} \in \mathcal{D}} \log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)
 $$
 
-Evaluating $$log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)$$ can be hard!
+Evaluating $$log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)$$ can be hard because the space for latent variable z is huge.
 
 ### Learning: Variational inference
 

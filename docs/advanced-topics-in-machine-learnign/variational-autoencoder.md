@@ -33,7 +33,7 @@ Challenge: Very difficult to specify the conditional distribution or the distrib
 Key idea:
 
 1. Assume latent variable is from a gaussian distribution, $$\mathbf{z} \sim \mathcal{N}(0, l)$$
-2. And the conditional distribution is also some form of gaussian, $$p(\mathbf{x} | \mathbf{z})=\mathcal{N}\left(\mu_{\theta}(\mathbf{z}), \Sigma_{\theta}(\mathbf{z})\right)
+2. And the conditional distribution is also in some form of gaussian, $$p(\mathbf{x} | \mathbf{z})=\mathcal{N}\left(\mu_{\theta}(\mathbf{z}), \Sigma_{\theta}(\mathbf{z})\right)
 $$ where $$\mu_{\theta},\Sigma_{\theta}$$ are neural networks
 
 ## Shallow mixture models
@@ -46,8 +46,25 @@ $$
 p(\mathbf{x} | \mathbf{z}=k)=\mathcal{N}\left(\mu_{k}, \Sigma_{k}\right)
 $$
 
+Generative process: 
+1. Pick a mixture component k by sampling z
+2. Generate a data point by sampling from that Gaussian
+
+The likelihood is non-convex: this increases representational power, but
+makes inference more challenging
+
+$$
+p(\mathbf{x})=\sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z})=\sum_{\mathbf{z}} p(\mathbf{z}) p(\mathbf{x} | \mathbf{z})=\sum_{k=1}^{k} p(\mathbf{z}=k) \underbrace{\mathcal{N}\left(\mathbf{x} ; \mu_{k}, \Sigma_{k}\right)}_{\text {component }}
+$$
+
 ## Deep latent-variable models
+Key idea: A mixture of an infinite number of Gaussians 
+1. $$
+\mathbf{z} \sim \mathcal{N}(0, l)
+$$ (From discrete to continuous)
 
 ### Representation: Variational autoencoder
 
 ### Learning: Variational inference
+
+## Learning deep latent variable generative models

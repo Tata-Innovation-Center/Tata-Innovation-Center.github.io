@@ -86,6 +86,17 @@ $$
 
 Evaluating $$log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)$$ can be hard because the space for latent variable z is huge.
 
+Solution: Approximations.
+1. Sample $$z^{(1)}, \cdots, z^{(k)}$$ uniformly at random
+2. Approximate expectation with sample average
+
+$$
+\sum_{\mathbf{z}} p_{\theta}(\mathbf{x}, \mathbf{z}) \approx|\mathcal{Z}| \frac{1}{k} \sum_{j=1}^{k} p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)
+$$
+
+First attempt: Naive Monte Carlo
+
+
 ### Learning: Variational inference
 
 ## Learning deep latent variable generative models

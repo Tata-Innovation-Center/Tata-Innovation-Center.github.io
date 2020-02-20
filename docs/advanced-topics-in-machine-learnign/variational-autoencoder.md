@@ -59,9 +59,23 @@ $$
 
 ## Deep latent-variable models
 Key idea: A mixture of an infinite number of Gaussians 
-1. $$
-\mathbf{z} \sim \mathcal{N}(0, l)
-$$ (From discrete to continuous)
+1. $$\mathbf{z} \sim \mathcal{N}(0, l)$$ (From discrete to continuous)
+2. $$p(\mathbf{x} | \mathbf{z})=\mathcal{N}\left(\mu_{\theta}(\mathbf{z}), \Sigma_{\theta}(\mathbf{z})\right)
+$$ where $$\mu_{\theta}, \Sigma_{\theta}$$ are neural networks. 
+
+$$
+\mu_{\theta}(\mathbf{z})=\sigma(A \mathbf{z}+c)=\left(\sigma\left(a_{1} \mathbf{z}+c_{1}\right), \sigma\left(a_{2} \mathbf{z}+c_{2}\right)\right)=\left(\mu_{1}(\mathbf{z}), \mu_{2}(\mathbf{z})\right)
+$$
+
+$$
+\left.\Sigma_{\theta}(\mathbf{z})=\operatorname{diag}(\exp (\sigma(B \mathbf{z}+d)))\right)=\left(\begin{array}{cc}{\exp \left(\sigma\left(b_{1} z+d_{1}\right)\right)} & {0} \\ {0} & {\exp \left(\sigma_{\left.2 z+d_{2}\right)}\right)}\end{array}\right)
+$$
+
+$$
+\theta=(A, B, c, d)
+$$
+
+3. Even though $$p(x | z)$$ is simple, the marginal $$p(x)$$ is very complex/flexible
 
 ### Representation: Variational autoencoder
 

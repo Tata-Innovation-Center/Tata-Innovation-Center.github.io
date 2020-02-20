@@ -58,7 +58,8 @@ p(\mathbf{x})=\sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z})=\sum_{\mathbf{z}} p(\m
 $$
 
 ## Deep latent-variable models
-Key idea: A mixture of an infinite number of Gaussians 
+
+### Key idea: A mixture of an infinite number of Gaussians 
 1. $$\mathbf{z} \sim \mathcal{N}(0, l)$$ (From discrete to continuous)
 2. $$p(\mathbf{x} | \mathbf{z})=\mathcal{N}\left(\mu_{\theta}(\mathbf{z}), \Sigma_{\theta}(\mathbf{z})\right)
 $$ where $$\mu_{\theta}, \Sigma_{\theta}$$ are neural networks. 
@@ -78,7 +79,7 @@ $$
 3. Even though $$p(\mathbf{x} \mid \mathbf{z})$$ is simple the marginal distributio of x is very complex/flexible
 
 
-Maximum likelihood learning for the above model:
+### Maximum likelihood learning for the above model:
 
 $$
 \log \prod_{\mathbf{x} \in \mathcal{D}} p(\mathbf{x} ; \theta)=\sum_{\mathbf{x} \in \mathcal{D}} \log p(\mathbf{x} ; \theta)=\sum_{\mathbf{x} \in \mathcal{D}} \log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)
@@ -88,7 +89,7 @@ Evaluating $$log \sum_{\mathbf{z}} p(\mathbf{x}, \mathbf{z} ; \theta)$$ can be h
 
 Solution: Approximations.
 
-**First attempt**: Naive Monte Carlo
+### **First attempt**: Naive Monte Carlo
 1. Sample $$z^{(1)}, \cdots, z^{(k)}$$ uniformly at random
 2. Approximate expectation with sample average
 
@@ -98,7 +99,7 @@ $$
 
 Works in theory but not in practice.  uniform random sampling is not a good choice.
 
-**Second attempt**: Importance Sampling
+### **Second attempt**: Importance Sampling
 $$
 p_{\theta}(\mathbf{x})=\sum_{\text {All possible values of } \mathbf{z}} p_{\theta}(\mathbf{x}, \mathbf{z})=\sum_{\mathbf{z} \in \mathcal{Z}} \frac{q(\mathbf{z})}{q(\mathbf{z})} p_{\theta}(\mathbf{x}, \mathbf{z})=\mathbb{E}_{\mathbf{z} \sim q(\mathbf{z})}\left[\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q(\mathbf{z})}\right]
 $$
@@ -108,6 +109,7 @@ $$
 p_{\theta}(\mathbf{x}) \approx \frac{1}{k} \sum_{j=1}^{k} \frac{p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)}{q\left(\mathbf{z}^{(j)}\right)}
 $$
 
+### Choice of q(z)
 A new question now: what is a good choice of q(z)? how to derive algorithms for choosing q and extending this approximation to the marginal log-likelihood.
 
 We can approximate marginal probabilities with importance sampling: 
@@ -152,5 +154,8 @@ $$
 $$
 
 However, In practice, the posterior $$p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ is intractable to compute.
+
+Suppose q(z) is any probability distribution over the hidden variables.
+A little bit of algebra reveals
 
 ## Learning deep latent variable generative models

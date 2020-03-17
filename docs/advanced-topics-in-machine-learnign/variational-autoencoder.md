@@ -183,7 +183,9 @@ $$
 1. Initialize $$\theta, \phi^{1}, \cdots, \phi^{M}$$
 2. Randomly sample a data point $$x^i$$ from D.
 3. Optimize $$\mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi^{i}\right)$$ as a function of $$\phi^i$$,
+
 3.1 Repeat $$\phi^{i}=\phi^{i}+\eta \nabla_{\phi^{i}} \mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi^{i}\right)$$
+
 3.2 until convergence to $$
 \phi^{i, *} \approx \arg \max _{\phi} \mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi\right)
 $$

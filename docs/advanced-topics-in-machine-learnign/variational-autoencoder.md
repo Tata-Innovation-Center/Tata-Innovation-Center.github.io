@@ -94,7 +94,7 @@ Solution: Approximations.
 2. Approximate expectation with sample average
 
 $$
-\sum_{\mathbf{z}} p_{\theta}(\mathbf{x}, \mathbf{z}) \approx|\mathcal{Z}| \frac{1}{k} \sum_{j=1}^{k} p_{\theta}\left(\mathbf{x}, \mathbf{z}^{(j)}\right)
+p_{\theta}(\mathbf{x})=\sum_{\text {All values of } \mathbf{z}} p_{\theta}(\mathbf{x}, \mathbf{z})=|\mathcal{Z}| \sum_{\mathbf{z} \in \mathcal{Z}} \frac{1}{|\mathcal{Z}|} p_{\theta}(\mathbf{x}, \mathbf{z})=|\mathcal{Z}| \mathbb{E}_{\mathbf{z} \sim U \text { niform }(\mathcal{Z})}\left[p_{\theta}(\mathbf{x}, \mathbf{z})\right]
 $$
 
 Works in theory but not in practice.  uniform random sampling is not a good choice.
@@ -169,4 +169,6 @@ $$
 \sum_{z} q(z) \log p_{\theta}(\mathbf{x}, z)-\underbrace{\sum_{z} q(z) \log q(z)}_{\text {Entropy } H(q) \text { of } q}
  = \sum_{\mathbf{z}} q(\mathbf{z}) \log p(\mathbf{z}, \mathbf{x} ; \theta)+H(q)
 $$
+
+
 ## Learning deep latent variable generative models

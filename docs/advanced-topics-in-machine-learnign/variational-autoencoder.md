@@ -146,18 +146,13 @@ This is also called Evidence Lower Bound (ELBO).
 Now we came back to the unanswered question: what is a good choice of q(z)
 
 Solution: Variational Inference: Optimize over the possible q’s to make
-bound as tight as possible.
+bound as tight as possible. pick $$\phi$$ so that $$q(z; \phi)$$ is as close as possible to
+$$p(z|x; \theta)$$.
 
-If $$q(\mathbf{z})=p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ the bound becomes:
+In practice, the posterior $$p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ is intractable to compute.
 
-$$
-\begin{aligned} \sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log \frac{p(\mathbf{x}, \mathbf{z} ; \theta)}{p(\mathbf{z} | \mathbf{x} ; \theta)} &=\sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log \frac{p(\mathbf{z} | \mathbf{x} ; \theta) p(\mathbf{x} ; \theta)}{p(\mathbf{z} | \mathbf{x} ; \theta)} \\ &=\sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \log p(\mathbf{x} ; \theta) \\ &=\log p(\mathbf{x} ; \theta) \sum_{\mathbf{z}} p(\mathbf{z} | \mathbf{x} ; \theta) \\ &=\log p(\mathbf{x} ; \theta) \end{aligned}
-$$
-
-However, In practice, the posterior $$p(\mathbf{z} \mid \mathbf{x} ; \theta)$$ is intractable to compute.
-
-Suppose q(z) is any probability distribution over the hidden variables.
-A little bit of algebra reveals
+Suppose q(z) is any probability distribution over the hidden variables parameterized by $$\phi$$.
+For example, a gaussian, A little bit of algebra reveals.
 
 $$
 D_{K L}(q(\mathbf{z}) \| p(\mathbf{z} | \mathbf{x} ; \theta))=-\sum_{\mathbf{z}} q(\mathbf{z}) \log p(\mathbf{z}, \mathbf{x} ; \theta)+\log p(\mathbf{x} ; \theta)-H(q) \geq 0
@@ -170,5 +165,31 @@ $$
  = \sum_{\mathbf{z}} q(\mathbf{z}) \log p(\mathbf{z}, \mathbf{x} ; \theta)+H(q)
 $$
 
+$$
+\log p(\mathbf{x} ; \theta)=\mathcal{L}(\mathbf{x} ; \theta, \phi)+D_{K L}(q(\mathbf{z} ; \phi) \| p(\mathbf{z} | \mathbf{x} ; \theta))
+$$
 
 ## Learning deep latent variable generative models
+
+We will optimize the ELBO over both $$\theta$$ and $$\phi$$
+
+Key point, for For each datapoint $$x^i$$, we need to find a good $$\phi^i$$.
+
+### Using SGD for learning.
+$$
+\begin{aligned} \mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi^{i}\right) &=\sum_{\mathbf{z}} q\left(\mathbf{z} ; \phi^{i}\right) \log p\left(\mathbf{z}, \mathbf{x}^{i} ; \theta\right)+H\left(q\left(\mathbf{z} ; \phi^{i}\right)\right) \\ &=E_{q\left(\mathbf{z} ; \phi^{i}\right)}\left[\log p\left(\mathbf{z}, \mathbf{x}^{i} ; \theta\right)-\log q\left(\mathbf{z} ; \phi^{i}\right)\right] \end{aligned}
+$$
+
+1. Initialize $$\theta, \phi^{1}, \cdots, \phi^{M}$$
+2. Randomly sample a data point $$x^i$$ from D.
+3. Optimize $$\mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi^{i}\right)$$ as a function of $$\phi^i$$,
+3.1 Repeat $$\phi^{i}=\phi^{i}+\eta \nabla_{\phi^{i}} \mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi^{i}\right)$$
+3.2 until convergence to $$
+\phi^{i, *} \approx \arg \max _{\phi} \mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi\right)
+$$
+
+4. Compute $$
+\nabla_{\theta} \mathcal{L}\left(\mathbf{x}^{i} ; \theta, \phi^{i, *}\right)
+$$
+
+5. Update $$\theta$$ in the gradient direction. Go to step 2

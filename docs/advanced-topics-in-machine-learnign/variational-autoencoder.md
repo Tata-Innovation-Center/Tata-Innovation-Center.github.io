@@ -47,10 +47,10 @@ p(\mathbf{x} | \mathbf{z}=k)=\mathcal{N}\left(\mu_{k}, \Sigma_{k}\right)
 $$
 
 Generative process: 
-1. Pick a mixture component k by sampling z
-2. Generate a data point by sampling from that Gaussian
+* Pick a mixture component k by sampling z
+* Generate a data point by sampling from that Gaussian
 
-The likelihood is non-convex: this increases representational power, but
+3. The likelihood is non-convex: this increases representational power, but
 makes inference more challenging
 
 $$
@@ -165,6 +165,7 @@ $$
  = \sum_{\mathbf{z}} q(\mathbf{z}) \log p(\mathbf{z}, \mathbf{x} ; \theta)+H(q)
 $$
 
+
 $$
 \log p(\mathbf{x} ; \theta)=\mathcal{L}(\mathbf{x} ; \theta, \phi)+D_{K L}(q(\mathbf{z} ; \phi) \| p(\mathbf{z} | \mathbf{x} ; \theta))
 $$
@@ -195,3 +196,11 @@ $$
 $$
 
 5. Update $$\theta$$ in the gradient direction. Go to step 2
+
+
+Question: How to compute the gradients? There might not be a closed form
+solution for the expectations. So we use Monte Carlo sampling.
+
+$$
+\begin{aligned} \mathcal{L}(\mathbf{x} ; \theta, \phi) &=\sum_{\mathbf{z}} q(\mathbf{z} ; \phi) \log p(\mathbf{z}, \mathbf{x} ; \theta)+H(q(\mathbf{z} ; \phi)) \\ &=E_{q(\mathbf{z} ; \phi)}[\log p(\mathbf{z}, \mathbf{x} ; \theta)-\log q(\mathbf{z} ; \phi)] \end{aligned}
+$$
